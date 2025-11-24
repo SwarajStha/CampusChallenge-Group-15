@@ -1,0 +1,8 @@
+# .gitignore
+.env
+__pycache__/
+#*.csv
+#results/
+venv/
+.DS_Store
+Thumbs.db
