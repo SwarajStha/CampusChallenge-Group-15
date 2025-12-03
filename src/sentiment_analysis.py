@@ -4,7 +4,7 @@ import re
 def parse_llm_response(raw_output: str):
     """
     Parses raw LLM output to extract (decision, reason).
-    Mirrors your original logic.
+    Mirrors original logic.
     """
     # Remove <think>...</think> blocks
     cleaned = re.sub(r"<think>.*?</think>", "", raw_output, flags=re.DOTALL).strip()
