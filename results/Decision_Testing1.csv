@@ -1,6 +1,101 @@
 ID_Number,Ticker,Headline,Decision,Reason
-1,ACCO,PowerA Announces the New Designed for Xbox Spectra Infinity Enhanced Wired Controller,buy,The announcement of a new product can drive investor optimism and boost the stock price.
-2,AIN,Is Albany International Corp.'s (NYSE:AIN) Recent Performance Tethered To Its Attractive Financial Prospects?,hold,The headline raises a question rather than providing clear positive or negative news.
+1,ACCO,PowerA Announces the New Designed for Xbox Spectra Infinity Enhanced Wired Controller,buy,"The announcement of a new enhanced controller suggests product innovation, likely boosting invest..."
+2,AIN,Is Albany International Corp.'s (NYSE:AIN) Recent Performance Tethered To Its Attractive Financial Prospects?,buy,"The headline suggests potential for strong financial growth, which typically drives investor inte..."
 3,AIV,The company Tesla booted from the S&amp;P 500 is outperforming it,buy,"The headline suggests Tesla is performing better than the S&P 500, signaling positive investor se..."
 4,ALF,"Alfi Inc shares set to fall from record highs, 'meme stock' Torchlight sinks",sell,Negative sentiment around Alfi Inc and declining momentum in related meme stocks signal downward...
-5,ALKS,Alkermes Presented New Data Analysis on Healthcare Resource Use Among Veterans With Alcohol Dependence,hold,The headline suggests neutral news with no clear positive or negative market impact.
+5,ALKS,Alkermes Presented New Data Analysis on Healthcare Resource Use Among Veterans With Alcohol Dependence,hold,The announcement is likely to be viewed as neutral with no immediate impact on stock price.
+6,AMT,1 Great Income Stock That Could Double Its Dividend,buy,"The headline suggests strong potential for dividend growth, which typically boosts investor inter..."
+7,ANET,"Should I Avoid Zscaler, Inc. (ZS)?",sell,"The headline suggests concern or hesitation about investing in Zscaler, likely signaling negative..."
+8,ATOM,Where Do Hedge Funds Stand On Atomera Incorporated (ATOM)?,hold,Uncertain market sentiment due to lack of clear positive or negative news.
+9,AUB,Why Atlantic Union (AUB) Stock Might be a Great Pick,buy,"The headline suggests positive sentiment and potential growth, encouraging investors to buy."
+10,AXSM,"How Many Axsome Therapeutics, Inc. (NASDAQ:AXSM) Shares Do Institutions Own?",hold,Institutional ownership levels typically don't directly impact stock price movement.
+11,AYRO,15 Best Very Cheap Stocks to Buy Right Now,buy,"The headline suggests strong investor interest in cheap stocks, likely boosting demand for the me..."
+12,BCML,Is Cedar Realty Trust Inc (CDR) A Good Stock To Buy?,buy,The headline suggests investor interest and potential positive sentiment toward the stock.
+13,BGFV,Is SMMF Stock A Buy?,buy,The headline suggests interest or analysis that could signal positive investor sentiment.
+14,BGSF,"Is Computer Task Group, Inc. (CTG) A Good Stock To Buy?",hold,The headline is neutral and poses a question without new information affecting stock price.
+15,BIPC,These High-Yield Dividend Stocks Are Growing at Blazing Speeds,buy,"The headline suggests strong growth and attractive returns, signaling positive momentum for the s..."
+16,BLDR,Builders FirstSource (BLDR) to Buy WTS Paradigm For $450M,buy,"The acquisition signals growth and expansion, likely boosting investor confidence."
+17,BLMN,Bloomin' Brands (BLMN) Sees Hammer Chart Pattern: Time to Buy?,sell,"The hammer chart pattern typically signals a potential reversal from an uptrend to a downtrend, s..."
+18,BLNK,Could This Be One Of The Best Ways To Play The EV Boom This Summer?,buy,"The headline suggests optimism and potential growth in the EV sector, likely boosting investor in..."
+19,BRX,Brixmor Property Group Issues Annual Corporate Responsibility Report,hold,The report likely reflects standard corporate compliance and does not signal significant positive...
+20,CAMP,Where Do Hedge Funds Stand On Aurora Mobile Limited (JG)?,hold,The headline raises curiosity but lacks clear positive or negative sentiment to drive immediate p...
+21,CERN,Cerner Stock Could See a Bump If It Gets Gobbled up By a Cloud Company,buy,The suggestion of a potential acquisition by a cloud company signals positive interest and possib...
+22,CLVT,A Sustainable Approach To Caring for the Environment,hold,"The headline is vague and lacks specific financial impact, so the stock is likely to remain stable."
+23,CNA,Is Sunrun Inc (RUN) Going to Burn These Hedge Funds?,buy,The headline suggests a potential short-squeeze or positive turnaround that could benefit the stock.
+24,CNSP,Best Stock of the Day: Bsquare (BSQR). See What's Going On.,buy,"The headline highlights Bsquare as the best stock of the day, likely driving positive investor se..."
+25,CNX,Gas producer EQT Corp to buy private driller Alta Resources for $3 bln,buy,"The acquisition signals growth and expansion, likely boosting investor confidence."
+26,CPF,Is Loma Negra Compania Industrial Argentina Sociedad Anonima (LOMA) A Good Stock To Buy?,hold,"The headline is a question seeking analysis, not a news event, so it is unlikely to impact the st..."
+27,CVX,The Best Energy Dividend Stocks Of 2021,buy,"Highlighting top dividend stocks suggests strong income potential, attracting investor interest."
+28,DAL,Jerome Powell’s hawkish tone on inflation takes the heat off Fed: strategist,hold,"The Fed's hawkish stance signals potential rate stability, reducing uncertainty but not directly..."
+29,DIS,Why Roku Stock Suddenly Jumped on Wednesday,buy,"Positive news likely drove investor optimism, prompting a sudden jump in Roku stock."
+30,DOC,Is Physicians Realty Trust a Buy?,hold,"The headline is neutral and poses a question, not providing clear positive or negative news."
+31,DRI,10 Best Dividend Stocks to Buy According to Billionaire Michael Hintze,buy,"Hintze's endorsement signals confidence, likely boosting investor interest and stock demand."
+32,DSWL,Interested In Deswell Industries' (NASDAQ:DSWL) Upcoming US$0.10 Dividend? You Have Four Days Left,buy,"The upcoming dividend may attract investors seeking income, boosting demand for the stock."
+33,DVA,Is DaVita Inc (DVA) A Good Stock To Buy?,buy,The headline suggests investor interest and potential positive sentiment toward DaVita.
+34,EBMT,"Eagle Bancorp Montana, Inc. Announces Results of its Modified  Dutch Auction Tender",hold,The announcement of tender results typically lacks strong directional bias without additional con...
+35,EGAN,Where Do Hedge Funds Stand On Theratechnologies Inc. (THTX)?,hold,The headline raises curiosity but lacks clear positive or negative sentiment to drive immediate p...
+36,EGBN,"Eagle Bancorp, Inc. Announces Cash Dividend",buy,"The announcement of a cash dividend signals financial strength and shareholder returns, likely bo..."
+37,ESE,Is ESCO Technologies' (NYSE:ESE) 133% Share Price Increase Well Justified?,buy,The significant share price increase suggests strong investor confidence and positive momentum.
+38,ESEA,"Euroseas Ltd. Signs New Building Agreements for the Acquisition of Two Fuel Efficient 2,800 teu Feeder Containerships",buy,"The new fuel-efficient ships suggest cost savings and growth, likely boosting investor confidence."
+39,FFIN,Planet Fitness Inc (PLNT) Fell Out Of Favor With Hedge Funds,sell,"Hedge funds reducing positions signals loss of confidence, likely leading to downward pressure on..."
+40,FHTX,Is Taseko Mines Limited (TGB) A Good Stock To Buy?,hold,"The headline is a question seeking analysis, not a news event, so it is unlikely to significantly..."
+41,FND,"Floor &amp; Decor Holdings, Inc. Announces Joining CEO Action for Diversity &amp; Inclusion™",buy,The commitment to diversity and inclusion can enhance the company's reputation and attract social...
+42,FORD,Lucid Motors poised to compete with Tesla as leader in EV,buy,"The headline positions Lucid as a rising competitor in the EV market, likely boosting investor co..."
+43,FORM,FormFactor (FORM) Expands Product Portfolio Via New Alliance,buy,"The expansion suggests growth potential and innovation, likely boosting investor confidence."
+44,FUNC,Should I Avoid DLH Holdings Corp. (DLHC)?,sell,"The headline suggests concern or caution about DLHC, likely leading to a negative market reaction."
+45,GBDC,"Hedge Funds Are Buying Academy Sports and Outdoors, Inc. (ASO)",buy,Institutional buying by hedge funds signals confidence in ASO's potential.
+46,HOV,Hovnanian Enterprises (NYSE:HOV) Is Experiencing Growth In Returns On Capital,buy,"The growth in returns on capital indicates improved efficiency and profitability, likely boosting..."
+47,HRTG,Sidoti Summer Virtual Small-Cap Conference,hold,The conference is a routine event and unlikely to significantly impact the stock price.
+48,HUBS,HubSpot Stock Composite Rating Reaches Stratosphere Amid Rapid Sales Growth,buy,The stratospheric rating and rapid sales growth signal strong investor confidence and upward mome...
+49,IGMS,"Hedge Funds Are Buying Academy Sports and Outdoors, Inc. (ASO)",buy,Hedge funds buying ASO suggests confidence in the stock's potential for growth.
+50,IMVT,Is Rattler Midstream LP (RTLR) A Good Stock To Buy?,buy,The headline suggests investor interest and potential positive sentiment toward the stock.
+51,INMD,Growth Stocks To Buy And Watch Include These Global Leaders On IBD's Stock Screener,buy,"The headline highlights growth stocks as attractive, signaling positive investor sentiment and po..."
+52,INVA,Is CNXN Stock A Buy Here?,buy,The question format suggests potential interest or optimism about the stock's value.
+53,IRIX,Iridex Announces First Quarter 2021 Financial Results,hold,The announcement of quarterly results typically does not move the stock until the actual results...
+54,JCI,"DEWA appoints Ghantoot Group, Moro Hub, Johnson Controls and Microsoft to implement the latest technologies at its new Al Shera'a headquarters",buy,"The appointment of leading tech firms signals a major tech upgrade, likely boosting investor conf..."
+55,JHG,Why Janus Henderson Group plc (JHG) is a Top Dividend Stock for Your Portfolio,buy,"The headline positions JHG as a top dividend stock, likely attracting income-focused investors an..."
+56,JJSF,"Zacks.com featured highlights include: J &amp; J Snack Foods, Rocky Brands, Vista Outdoor, Sturm, Ruger &amp; Co and EuroDry",buy,Being featured by Zacks.com often signals positive investor interest and potential stock performa...
+57,LOPE,Why Grand Canyon Education Stock Fell 16% in May,sell,"Negative performance indicates investor concern or poor results, leading to expected price decline."
+58,LPX,Where Do Hedge Funds Stand On Popular Inc (BPOP)?,hold,Unclear sentiment from hedge funds suggests mixed or neutral market expectations.
+59,LRCX,"Dow Jones Futures: Apple Tests Buy Point In Market Rally As Tesla, Nio Loom; Micron Earnings Jump",buy,Apple's test of a buy point in a market rally suggests positive momentum and investor confidence.
+60,MIRM,Mirum Pharmaceuticals to Present at Piper Sandler’s Virtual EASL Takeaway Day,hold,The presentation is informational and unlikely to cause immediate price movement.
+61,MMLP,Is Corenergy Infrastructure Trust Inc (CORR) A Good Stock To Buy?,hold,The headline is neutral and poses a question without new information affecting stock price.
+62,MPAA,Motorcar Parts of America (MPAA) Q4 2021 Earnings Call Transcript,hold,"The earnings call transcript does not inherently signal positive or negative news, so the stock i..."
+63,MRK,Merck to Hold Second-Quarter 2021 Sales and Earnings Conference Call on July 29,hold,"The conference call announcement does not provide new financial results yet, so the market is unl..."
+64,NWE,A Look At The Fair Value Of NorthWestern Corporation (NASDAQ:NWE),hold,"The headline is neutral and informational, suggesting no immediate market movement."
+65,PAVM,"Tim Baxter, Former CEO of Samsung Electronics North America and Global Technology Industry Leader, Joins PAVmed Board of Directors",buy,The addition of a high-profile industry leader like Tim Baxter signals credibility and strategic...
+66,PBFS,"Hedge Funds Have Never Been This Bullish On Chicken Soup for the Soul Entertainment, Inc. (CSSE)",buy,"Hedge funds being highly bullish signals strong confidence, likely driving upward momentum in the..."
+67,PETZ,Assertio Holdings Inc. (ASRT) Fell Out Of Favor With Hedge Funds,sell,"Hedge funds reducing positions signals loss of confidence, likely leading to downward pressure on..."
+68,PFBC,What Kind Of Investors Own Most Of Preferred Bank (NASDAQ:PFBC)?,hold,The headline raises curiosity but does not provide new information to drive immediate price movem...
+69,PK,Park Hotels &amp; Resorts Inc. Completes the Sale of the Hotel Indigo San Diego Gaslamp Quarter and Courtyard Washington Capitol Hill Navy Yard,sell,"The sale of profitable assets may signal financial distress or strategic retrenchment, leading to..."
+70,POOL,10 Best ESG Stocks to Buy Now,buy,The headline suggests strong investor interest and positive momentum for ESG stocks.
+71,PYPL,Paypal (PYPL) Stock Sinks As Market Gains: What You Should Know,sell,Negative sentiment around PayPal drives stock down despite broader market gains.
+72,REKR,"CLASS ACTION UPDATE for WISH, RLX and REKR: Levi &amp; Korsinsky, LLP Reminds Investors of Class Actions on Behalf of Shareholders",sell,"Class action lawsuits typically signal legal and financial risks, prompting investors to sell sha..."
+73,REVB,Revere Bank Announces Record Earnings for 2019 – Net Income of $31.70 Million Increased 14.7% Over 2018's Record Earnings,buy,"The significant increase in net income indicates strong performance, likely to boost investor con..."
+74,RNGR,Hotels eye Fed's Main Street loans as occupancy rates remain low,sell,"The headline suggests ongoing weak demand for hotels, signaling continued financial strain and lo..."
+75,ROK,Is NatWest Group plc (NWG) Going to Burn These Hedge Funds?,buy,"The headline suggests potential short-squeeze or value realization, likely boosting NWG's stock p..."
+76,RTX,Collins Aerospace advances zero-emission aviation with 500KW electric motor for Hybrid Air Vehicles' Airlander 10 aircraft,buy,The innovation in zero-emission aviation signals strong growth potential and positions Collins Ae...
+77,SBNY,Hedge Funds Have Never Been This Bullish On Signature Bank (SBNY),buy,"Hedge funds being highly bullish signals strong confidence, likely driving upward momentum in the..."
+78,SGC,Superior Group of Companies (NASDAQ:SGC) Shareholders Will Want The ROCE Trajectory To Continue,buy,Positive sentiment around ROCE trajectory suggests strong operational performance and shareholder...
+79,SJ,Scienjoy Reports Unaudited First Quarter 2021 Financial Results,hold,"The report of unaudited financial results lacks verification, offering limited insight for immedi..."
+80,SKIL,"Skillsoft Launches Debt Refinancing and Comments on Combined Results for the Quarter Ended April 30, 2021",hold,The debt refinancing and comments on results suggest stability but lack strong positive or negati...
+81,SLNG,"Stabilis Solutions Acquires LNG Production Facility in Port Allen, Louisiana",buy,"The acquisition expands Stabilis's infrastructure and production capabilities, signaling growth p..."
+82,SNGX,"50+ Companies to Present at the Access to Giving Virtual Investor Conference on July 13th - 15th, 2021",hold,The announcement does not directly impact the stock price of any specific company.
+83,SO,"Georgia Power Foundation announces $500,000 investment in Georgia Justice Project initiative",buy,"The significant investment signals strong support for the initiative, likely boosting the foundat..."
+84,STAA,What Makes Staar Surgical (STAA) a Strong Momentum Stock: Buy Now?,buy,The headline suggests positive momentum and a potential buying opportunity for Staar Surgical.
+85,SWKS,Skyworks Solutions (SWKS) Outpaces Stock Market Gains: What You Should Know,buy,"The headline suggests outperformance, signaling positive momentum and investor confidence."
+86,TBI,"With a Focus on Putting Work Within Reach™, Margaret Tuohy Joins PeopleReady to Lead Product Innovation",buy,The addition of a leader to drive product innovation signals growth and strategic advancement.
+87,TFX,Teleflex Completes Divestiture of Respiratory Assets to Medline Industries,sell,"The divestiture may signal underperformance or strategic refocusing, often leading to short-term..."
+88,TRN,Hedge Funds Have Never Been This Bullish On Outfront Media Inc. (REIT) (OUT),buy,"Hedge funds being highly bullish signals strong confidence, likely driving upward momentum in the..."
+89,TSBK,"Where Do Hedge Funds Stand On Timberland Bancorp, Inc. (TSBK)?",hold,The headline raises curiosity but does not provide clear positive or negative sentiment about TSBK.
+90,TSE,"Hedge Funds Are Buying Academy Sports and Outdoors, Inc. (ASO)",buy,Hedge funds buying ASO suggests confidence in the stock's potential for growth.
+91,TTGT,"TechTarget to Announce 2021 Second Quarter Financial Results on August 4, 2021",hold,"The announcement of quarterly results typically causes volatility, but no positive or negative ne..."
+92,ULCC,Home Chef Expands Partnership with Points; Adds Frontier Airlines as a New Loyalty Partner,buy,"The expansion of loyalty partnerships increases brand visibility and customer reach, likely boost..."
+93,VECO,Here's Why Veeco Instruments (NASDAQ:VECO) Can Manage Its Debt Responsibly,buy,"The headline suggests improved financial stability, which boosts investor confidence."
+94,VEL,3 Mortgage &amp; Related Services Stocks to Battle Industry Woes,buy,"The headline suggests potential industry turnaround, making these stocks attractive for investment."
+95,VMEO,Vimeo Stock: Can It Stream Profits for Investors?,hold,"The headline raises uncertainty about Vimeo's profitability, likely leading to a cautious market..."
+96,VRNS,Varonis Systems Stock Shows Rising Relative Strength As Software Sector Rebounds; Prepping For New Run?,buy,The rising relative strength and sector rebound suggest positive momentum for Varonis Systems.
+97,VRSN,"Is Verisign, Inc. (VRSN) A Good Stock To Buy?",buy,The headline suggests investor interest and potential positive sentiment toward VRSN.
+98,WMT,Walmart de Mexico to allow older grocery packers back in stores,buy,"The move signals cost-cutting and operational efficiency, likely boosting investor confidence."
+99,WSR,Do Hedge Funds Love Motorsport Games Inc. (MSGM)?,buy,"The headline suggests potential interest from hedge funds, which often drives short-term stock pr..."
+100,XYL,Here is What Hedge Funds Think About KeyCorp (KEY),hold,"The headline is neutral and informational, unlikely to cause immediate price movement."
