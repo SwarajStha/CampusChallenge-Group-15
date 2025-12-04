@@ -6,10 +6,12 @@ from api_client import call_groq
 from prompt_engine import load_system_prompt, build_messages
 from sentiment_analysis import parse_llm_response
 
+# Use paths from src directory
 PROMPT_PATH = "CampusChallenge-Group-15/prompts/prompt_v3.txt"
 DATA_PATH = "CampusChallenge-Group-15/sample-data/API_test_v2.csv"
+RESULTS_DIR = "CampusChallenge-Group-15/results"
 
-def get_next_filename(base="Decision_Testing", ext=".csv", directory="results"):
+def get_next_filename(base="Decision_Testing", ext=".csv", directory=RESULTS_DIR):
     """Find the next available filename with incremental numbering."""
     # Look for files in the specified directory
     pattern = os.path.join(directory, f"{base}*{ext}")
@@ -47,9 +49,9 @@ def main():
     
     # Save
     out_df = pd.DataFrame(results)
-    os.makedirs("results", exist_ok=True)
-    out_path = get_next_filename()  # Now checks results/ directory
-    full_path = os.path.join("results", out_path)
+    os.makedirs(RESULTS_DIR, exist_ok=True)
+    out_path = get_next_filename()  # Checks results/directory
+    full_path = os.path.join(RESULTS_DIR, out_path)
     out_df.to_csv(full_path, index=False)
     print(f"✅ Saved to {full_path}")
 
