@@ -1,0 +1,101 @@
+ID_Number,Ticker,Headline,Score,Reason
+1,ACCO,PowerA Announces the New Designed for Xbox Spectra Infinity Enhanced Wired Controller,0.4,New product launch generates mild retail and market interest.
+2,AIN,Is Albany International Corp.'s (NYSE:AIN) Recent Performance Tethered To Its Attractive Financial Prospects?,0.26,Ambiguous phrasing with slight positive tilt from financial stability.
+3,AIV,The company Tesla booted from the S&amp;P 500 is outperforming it,0.72,Retail and swing traders hype Tesla's momentum over S&P.
+4,ALF,"Alfi Inc shares set to fall from record highs, 'meme stock' Torchlight sinks",-0.57,"Meme stock sentiment weakens, triggering short-term sell-off."
+5,ALKS,Alkermes Presented New Data Analysis on Healthcare Resource Use Among Veterans With Alcohol Dependence,0.19,"Slight positive tilt from new data, but no major market impact expected."
+6,AMT,1 Great Income Stock That Could Double Its Dividend,0.61,Strong dividend growth hints at long-term financial strength and investor optimism.
+7,ANET,"Should I Avoid Zscaler, Inc. (ZS)?",-0.07,Ambiguous question headline lacks clear direction for immediate reaction.
+8,ATOM,Where Do Hedge Funds Stand On Atomera Incorporated (ATOM)?,0.09,Uncertain hedge fund positioning creates mild retail optimism.
+9,AUB,Why Atlantic Union (AUB) Stock Might be a Great Pick,0.72,Retail enthusiasm and bullish framing may drive a short-term rally.
+10,AXSM,"How Many Axsome Therapeutics, Inc. (NASDAQ:AXSM) Shares Do Institutions Own?",0.17,Institutional ownership data hints at potential value but lacks immediate direction.
+11,AYRO,15 Best Very Cheap Stocks to Buy Right Now,0.73,Retail-driven buying frenzy boosts cheap stock list entries.
+12,BCML,Is Cedar Realty Trust Inc (CDR) A Good Stock To Buy?,0.07,Ambiguous question form with no clear positive or negative signal.
+13,BGFV,Is SMMF Stock A Buy?,0.18,Ambiguous headline with no clear positive or negative signal.
+14,BGSF,"Is Computer Task Group, Inc. (CTG) A Good Stock To Buy?",0.28,"Question format implies uncertainty, no clear bullish or bearish signal."
+15,BIPC,These High-Yield Dividend Stocks Are Growing at Blazing Speeds,0.6,High-yield growth stocks attract bullish retail and swing traders.
+16,BLDR,Builders FirstSource (BLDR) to Buy WTS Paradigm For $450M,0.74,Strategic acquisition signals growth and operational expansion.
+17,BLMN,Bloomin' Brands (BLMN) Sees Hammer Chart Pattern: Time to Buy?,0.73,Retail-driven bullish chart pattern triggers short-term buying frenzy.
+18,BLNK,Could This Be One Of The Best Ways To Play The EV Boom This Summer?,0.73,EV sector hype and summer momentum drive retail optimism.
+19,BRX,Brixmor Property Group Issues Annual Corporate Responsibility Report,0.18,ESG report is a minor positive with limited immediate impact.
+20,CAMP,Where Do Hedge Funds Stand On Aurora Mobile Limited (JG)?,0.03,Ambiguous hedge fund positioning creates uncertainty.
+21,CERN,Cerner Stock Could See a Bump If It Gets Gobbled up By a Cloud Company,0.7,Acquisition buzz and cloud hype drive strong retail and swing trader optimism.
+22,CLVT,A Sustainable Approach To Caring for the Environment,0.2,Vague environmental focus lacks immediate market impact.
+23,CNA,Is Sunrun Inc (RUN) Going to Burn These Hedge Funds?,0.76,Retail-driven short squeeze hype boosts immediate optimism.
+24,CNSP,Best Stock of the Day: Bsquare (BSQR). See What's Going On.,0.76,Retail-driven hype and squeeze potential boost short-term optimism.
+25,CNX,Gas producer EQT Corp to buy private driller Alta Resources for $3 bln,0.74,Strategic acquisition boosts growth and investor optimism.
+26,CPF,Is Loma Negra Compania Industrial Argentina Sociedad Anonima (LOMA) A Good Stock To Buy?,0.15,Ambiguous question with no clear bullish or bearish signal.
+27,CVX,The Best Energy Dividend Stocks Of 2021,0.42,Dividend focus boosts energy sector appeal among income-focused investors.
+28,DAL,Jerome Powell’s hawkish tone on inflation takes the heat off Fed: strategist,-0.31,Hawkish Fed comments typically pressure markets in the short term.
+29,DIS,Why Roku Stock Suddenly Jumped on Wednesday,0.74,Sudden jump implies strong earnings or user growth news.
+30,DOC,Is Physicians Realty Trust a Buy?,0.02,Ambiguous headline lacks clear direction for immediate reaction.
+31,DRI,10 Best Dividend Stocks to Buy According to Billionaire Michael Hintze,0.61,Billionaire endorsement boosts short-term demand for dividend stocks.
+32,DSWL,Interested In Deswell Industries' (NASDAQ:DSWL) Upcoming US$0.10 Dividend? You Have Four Days Left,0.13,Small dividend announcement generates limited near-term interest.
+33,DVA,Is DaVita Inc (DVA) A Good Stock To Buy?,0.32,Ambiguous question with no clear positive or negative signal.
+34,EBMT,"Eagle Bancorp Montana, Inc. Announces Results of its Modified  Dutch Auction Tender",0.19,Routine tender results with no clear positive or negative bias.
+35,EGAN,Where Do Hedge Funds Stand On Theratechnologies Inc. (THTX)?,-0.06,"Ambiguous hedge fund positions create uncertainty, no clear direction."
+36,EGBN,"Eagle Bancorp, Inc. Announces Cash Dividend",0.43,Dividend announcement signals stability and attracts income investors.
+37,ESE,Is ESCO Technologies' (NYSE:ESE) 133% Share Price Increase Well Justified?,0.37,Sharp rise raises questions but some momentum remains.
+38,ESEA,"Euroseas Ltd. Signs New Building Agreements for the Acquisition of Two Fuel Efficient 2,800 teu Feeder Containerships",0.51,Fleet expansion signals growth and operational efficiency.
+39,FFIN,Planet Fitness Inc (PLNT) Fell Out Of Favor With Hedge Funds,-0.45,Hedge fund exits signal near-term uncertainty and potential selling pressure.
+40,FHTX,Is Taseko Mines Limited (TGB) A Good Stock To Buy?,0.33,Ambiguous question lacks clear bullish or bearish signal.
+41,FND,"Floor &amp; Decor Holdings, Inc. Announces Joining CEO Action for Diversity &amp; Inclusion™",0.32,Commitment to diversity may improve long-term brand perception.
+42,FORD,Lucid Motors poised to compete with Tesla as leader in EV,0.64,Lucid's positioning as a Tesla competitor boosts short-term optimism.
+43,FORM,FormFactor (FORM) Expands Product Portfolio Via New Alliance,0.52,Strategic alliance boosts growth expectations and investor optimism.
+44,FUNC,Should I Avoid DLH Holdings Corp. (DLHC)?,-0.11,"Ambiguous headline raises uncertainty, leading to slight selling pressure."
+45,GBDC,"Hedge Funds Are Buying Academy Sports and Outdoors, Inc. (ASO)",0.59,Institutional buying signals positive short-term momentum.
+46,HOV,Hovnanian Enterprises (NYSE:HOV) Is Experiencing Growth In Returns On Capital,0.66,Improved capital returns suggest stronger operational performance.
+47,HRTG,Sidoti Summer Virtual Small-Cap Conference,0.06,Routine conference with no immediate market-moving news.
+48,HUBS,HubSpot Stock Composite Rating Reaches Stratosphere Amid Rapid Sales Growth,0.76,Strong sales growth and bullish sentiment drive immediate gains.
+49,IGMS,"Hedge Funds Are Buying Academy Sports and Outdoors, Inc. (ASO)",0.59,Institutional buying signals positive short-term momentum.
+50,IMVT,Is Rattler Midstream LP (RTLR) A Good Stock To Buy?,0.04,Ambiguous question headline lacks clear direction or actionable insight.
+51,INMD,Growth Stocks To Buy And Watch Include These Global Leaders On IBD's Stock Screener,0.52,Positive screening list boosts investor interest and short-term optimism.
+52,INVA,Is CNXN Stock A Buy Here?,0.11,Ambiguous headline lacks clear direction or actionable insight.
+53,IRIX,Iridex Announces First Quarter 2021 Financial Results,0.12,Routine financial results with no major surprises.
+54,JCI,"DEWA appoints Ghantoot Group, Moro Hub, Johnson Controls and Microsoft to implement the latest technologies at its new Al Shera'a headquarters",0.64,High-profile tech partnerships signal growth and innovation.
+55,JHG,Why Janus Henderson Group plc (JHG) is a Top Dividend Stock for Your Portfolio,0.65,Dividend focus highlights stability and attracts income-seeking investors.
+56,JJSF,"Zacks.com featured highlights include: J &amp; J Snack Foods, Rocky Brands, Vista Outdoor, Sturm, Ruger &amp; Co and EuroDry",0.17,Media exposure may attract minor retail interest.
+57,LOPE,Why Grand Canyon Education Stock Fell 16% in May,-0.6,Sharp drop raises concerns and triggers immediate selling pressure.
+58,LPX,Where Do Hedge Funds Stand On Popular Inc (BPOP)?,0.03,Ambiguous hedge fund focus with no clear positive or negative signal.
+59,LRCX,"Dow Jones Futures: Apple Tests Buy Point In Market Rally As Tesla, Nio Loom; Micron Earnings Jump",0.63,Strong earnings and rally momentum boost near-term optimism.
+60,MIRM,Mirum Pharmaceuticals to Present at Piper Sandler’s Virtual EASL Takeaway Day,0.34,Presentation at key event increases visibility and short-term optimism.
+61,MMLP,Is Corenergy Infrastructure Trust Inc (CORR) A Good Stock To Buy?,0.04,Ambiguous question with no clear positive or negative signal.
+62,MPAA,Motorcar Parts of America (MPAA) Q4 2021 Earnings Call Transcript,0.06,Earnings call transcript alone lacks clear positive or negative sentiment.
+63,MRK,Merck to Hold Second-Quarter 2021 Sales and Earnings Conference Call on July 29,0.06,Routine conference call with no immediate impact.
+64,NWE,A Look At The Fair Value Of NorthWestern Corporation (NASDAQ:NWE),0.18,Fair value analysis lacks immediate directional bias.
+65,PAVM,"Tim Baxter, Former CEO of Samsung Electronics North America and Global Technology Industry Leader, Joins PAVmed Board of Directors",0.32,Adds credibility and long-term strategic value.
+66,PBFS,"Hedge Funds Have Never Been This Bullish On Chicken Soup for the Soul Entertainment, Inc. (CSSE)",0.8,Retail hype and institutional bullishness fuel short-term optimism.
+67,PETZ,Assertio Holdings Inc. (ASRT) Fell Out Of Favor With Hedge Funds,-0.53,Hedge fund exits signal short-term selling pressure and weakening confidence.
+68,PFBC,What Kind Of Investors Own Most Of Preferred Bank (NASDAQ:PFBC)?,0.03,Ownership disclosure is routine and unlikely to move the stock.
+69,PK,Park Hotels &amp; Resorts Inc. Completes the Sale of the Hotel Indigo San Diego Gaslamp Quarter and Courtyard Washington Capitol Hill Navy Yard,0.18,Asset sales may improve balance sheet but lack immediate impact.
+70,POOL,10 Best ESG Stocks to Buy Now,0.65,ESG stock list boosts retail and institutional buying interest.
+71,PYPL,Paypal (PYPL) Stock Sinks As Market Gains: What You Should Know,-0.48,Underperformance in a rising market triggers short-term selling.
+72,REKR,"CLASS ACTION UPDATE for WISH, RLX and REKR: Levi &amp; Korsinsky, LLP Reminds Investors of Class Actions on Behalf of Shareholders",-0.38,Legal action raises investor concerns and short-term selling pressure.
+73,REVB,Revere Bank Announces Record Earnings for 2019 – Net Income of $31.70 Million Increased 14.7% Over 2018's Record Earnings,0.76,Record earnings growth signals strong performance and investor optimism.
+74,RNGR,Hotels eye Fed's Main Street loans as occupancy rates remain low,-0.13,Uncertainty over recovery and low occupancy weigh on sentiment.
+75,ROK,Is NatWest Group plc (NWG) Going to Burn These Hedge Funds?,0.76,Retail-driven short squeeze hype boosts immediate buying.
+76,RTX,Collins Aerospace advances zero-emission aviation with 500KW electric motor for Hybrid Air Vehicles' Airlander 10 aircraft,0.54,Green aviation progress boosts investor optimism.
+77,SBNY,Hedge Funds Have Never Been This Bullish On Signature Bank (SBNY),0.7,Strong hedge fund bullishness signals potential short-term breakout.
+78,SGC,Superior Group of Companies (NASDAQ:SGC) Shareholders Will Want The ROCE Trajectory To Continue,0.32,Positive fundamental focus may attract long-term investors.
+79,SJ,Scienjoy Reports Unaudited First Quarter 2021 Financial Results,0.04,"Unaudited results lack credibility, minimal market impact."
+80,SKIL,"Skillsoft Launches Debt Refinancing and Comments on Combined Results for the Quarter Ended April 30, 2021",0.12,Debt refinancing and results are neutral with no clear bullish or bearish signal.
+81,SLNG,"Stabilis Solutions Acquires LNG Production Facility in Port Allen, Louisiana",0.64,Strategic acquisition boosts growth and operational scale.
+82,SNGX,"50+ Companies to Present at the Access to Giving Virtual Investor Conference on July 13th - 15th, 2021",0.15,Investor conference participation may generate mild short-term interest.
+83,SO,"Georgia Power Foundation announces $500,000 investment in Georgia Justice Project initiative",0.32,Philanthropy boost may improve sentiment but lacks strong financial impact.
+84,STAA,What Makes Staar Surgical (STAA) a Strong Momentum Stock: Buy Now?,0.76,"Retail momentum hype and ""buy now"" trigger short-term bullish bias."
+85,SWKS,Skyworks Solutions (SWKS) Outpaces Stock Market Gains: What You Should Know,0.69,Strong relative performance hints at positive momentum and investor optimism.
+86,TBI,"With a Focus on Putting Work Within Reach™, Margaret Tuohy Joins PeopleReady to Lead Product Innovation",0.35,"Strategic hire hints at product growth, but no immediate impact."
+87,TFX,Teleflex Completes Divestiture of Respiratory Assets to Medline Industries,0.47,Divestiture streamlines operations and may boost long-term focus.
+88,TRN,Hedge Funds Have Never Been This Bullish On Outfront Media Inc. (REIT) (OUT),0.6,Strong institutional bullishness drives short-to-mid term optimism.
+89,TSBK,"Where Do Hedge Funds Stand On Timberland Bancorp, Inc. (TSBK)?",-0.02,Ambiguous hedge fund stance lacks clear market direction.
+90,TSE,"Hedge Funds Are Buying Academy Sports and Outdoors, Inc. (ASO)",0.55,Institutional buying signals short-term optimism.
+91,TTGT,"TechTarget to Announce 2021 Second Quarter Financial Results on August 4, 2021",0.03,Routine earnings announcement with no immediate directional bias.
+92,ULCC,Home Chef Expands Partnership with Points; Adds Frontier Airlines as a New Loyalty Partner,0.51,New loyalty partnership boosts short-term optimism.
+93,VECO,Here's Why Veeco Instruments (NASDAQ:VECO) Can Manage Its Debt Responsibly,0.43,Positive debt management signals build cautious investor confidence.
+94,VEL,3 Mortgage &amp; Related Services Stocks to Battle Industry Woes,-0.11,Sector struggles and weak fundamentals weigh on sentiment.
+95,VMEO,Vimeo Stock: Can It Stream Profits for Investors?,0.48,Mixed sentiment with retail optimism and fundamental uncertainty.
+96,VRNS,Varonis Systems Stock Shows Rising Relative Strength As Software Sector Rebounds; Prepping For New Run?,0.59,Rising RSI and sector rebound suggest positive momentum.
+97,VRSN,"Is Verisign, Inc. (VRSN) A Good Stock To Buy?",0.5,Ambiguous question lacks actionable insight for clear direction.
+98,WMT,Walmart de Mexico to allow older grocery packers back in stores,0.13,Minor workforce adjustment with no clear market impact.
+99,WSR,Do Hedge Funds Love Motorsport Games Inc. (MSGM)?,0.0,Ambiguous headline with no clear positive or negative signal.
+100,XYL,Here is What Hedge Funds Think About KeyCorp (KEY),0.15,Neutral sentiment as fund views lack clear direction.

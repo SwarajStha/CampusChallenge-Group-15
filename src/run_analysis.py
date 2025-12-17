@@ -7,8 +7,8 @@ from prompt_engine import load_system_prompt, build_messages
 from sentiment_analysis import parse_llm_response
 
 # Use paths from src directory
-PROMPT_PATH = "CampusChallenge-Group-15/prompts/prompt_v3.txt"
-DATA_PATH = "CampusChallenge-Group-15/sample-data/API_test_v2.csv"
+PROMPT_PATH = "CampusChallenge-Group-15/prompts/prompt_v5(without_Regime).txt"
+DATA_PATH = "CampusChallenge-Group-15/sample-data/Prompt_Testing_Data_1.csv"
 RESULTS_DIR = "CampusChallenge-Group-15/results"
 
 def get_next_filename(base="Decision_Testing", ext=".csv", directory=RESULTS_DIR):
@@ -34,14 +34,33 @@ def main():
     
     results = []
     for idx, row in df.iterrows():
+        print(f"\n{'='*80}")
         print(f"Processing {idx+1}/{len(df)}")
+        print(f"Ticker: {row['ticker']}")
+        print(f"Headline: {row['title']}")
+        print(f"{'-'*80}")
+        
         messages = build_messages(system_prompt, row['title'])
         raw_output = call_groq(messages)
+        
+        print(f"🔍 RAW LLM OUTPUT:")
+        print(raw_output)
+        print(f"{'-'*80}")
+        
         score, reason = parse_llm_response(raw_output)
+        
+        print(f"📊 PARSED RESULTS:")
+        print(f"   Score: {score}")
+        print(f"   Reason: {reason}")
+        print(f"{'='*80}\n")
+        
+        # Extract date part only (before 'T')
+        date_only = row['date'].split('T')[0] if 'T' in str(row['date']) else row['date']
         
         results.append({
             "ID_Number": idx + 1,
             "Ticker": row["ticker"],
+            "Date": date_only,
             "Headline": row["title"],
             "Score": score,
             "Reason": reason

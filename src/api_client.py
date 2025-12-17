@@ -15,6 +15,6 @@ def call_groq(messages: list, model: str = "qwen/qwen3-32b") -> str:
         messages=messages,
         model=model,
         temperature=0.0,
-        max_tokens=50
+        max_tokens=250
     )
     return (response.choices[0].message.content or "").strip()
