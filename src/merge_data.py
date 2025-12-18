@@ -2,9 +2,9 @@ import pandas as pd
 from datetime import timedelta
 
 # File paths - change these variables to use different files
-DECISION_FILE = "CampusChallenge-Group-15/results/Decision_Testing24.csv"
-RETURNS_FILE = "CampusChallenge-Group-15/sample-data/Daily_Return_Matching_PTD_1.csv"
-OUTPUT_FILE = "CampusChallenge-Group-15/results/Merged_Data(v5_without_Regime).csv"
+DECISION_FILE = "CampusChallenge-Group-15/results/Decision Testing Scores/Decision_Testing_Full1.csv"
+RETURNS_FILE = "CampusChallenge-Group-15/sample-data/Full_TestData_DailyReturns.csv"
+OUTPUT_FILE = "CampusChallenge-Group-15/results/Merged Data/Merged_Data_v6(Full-Test_Data)_non-adjusted.csv"
 
 def merge_datasets(decision_file, returns_file, output_file):
     """
@@ -33,7 +33,7 @@ def merge_datasets(decision_file, returns_file, output_file):
     
     # Add 1 day to Decision_Testing dates
     print("\nAdding 1 day to Decision_Testing dates...")
-    decision_df['Date_Adjusted'] = decision_df['Date'] + timedelta(days=1)
+    decision_df['Date_Adjusted'] = decision_df['Date'] + timedelta(days=1) # No need to adjust for daily data - comment after '+'
     
     # Standardize ticker column names for merging
     # Check which column name is used

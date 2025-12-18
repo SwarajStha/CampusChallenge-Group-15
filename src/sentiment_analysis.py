@@ -113,7 +113,7 @@ def parse_simple_format(cleaned_output):
                 if len(reason) > 100:
                     reason = reason[:97].rstrip() + "..."
                 
-                print(f"   📊 Simple Format Score: {score}")
+                # print(f"   📊 Simple Format Score: {score}")
                 return score, reason
             else:
                 print(f"❌ Score out of range [-1, 1]: {score}")
@@ -123,7 +123,7 @@ def parse_simple_format(cleaned_output):
             return "error", ""
     
     # Fallback: Look for standalone number followed by text (no labels)
-    print(f"   ⚠️ 'Line 1:' or 'Line 2:' labels missing, trying fallback parsing...")
+    print(f"⚠️ 'Line 1:' or 'Line 2:' labels missing, trying fallback parsing...")
     
     # Match: number (with optional sign and decimal) followed by any text
     fallback_match = re.search(r'^(-?\d+\.?\d*)\s*\n?\s*(.+)', cleaned_output.strip(), flags=re.DOTALL)
@@ -142,7 +142,7 @@ def parse_simple_format(cleaned_output):
             if len(reason) > 100:
                 reason = reason[:97].rstrip() + "..."
             
-            print(f"   📊 Fallback Format Score: {score}")
+            # print(f"   📊 Fallback Format Score: {score}")
             
             return score, reason
         else:

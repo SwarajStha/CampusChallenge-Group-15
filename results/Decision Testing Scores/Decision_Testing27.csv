@@ -1,0 +1,101 @@
+ID_Number,Ticker,Date,Headline,Score,Reason
+1,ACCO,2021-06-29,PowerA Announces the New Designed for Xbox Spectra Infinity Enhanced Wired Controller,0.15,New controller release may generate mild interest but lacks immediate financial impact.
+2,AIN,2021-06-09,Is Albany International Corp.'s (NYSE:AIN) Recent Performance Tethered To Its Attractive Financial Prospects?,0.0,Ambiguous phrasing with no clear positive or negative signal.
+3,AIV,2021-06-28,The company Tesla booted from the S&amp;P 500 is outperforming it,0.15,"Reentry or outperformance after removal may be priced in, limiting immediate impact."
+4,ALF,2021-06-23,"Alfi Inc shares set to fall from record highs, 'meme stock' Torchlight sinks",-0.55,Negative sentiment and meme stock dynamics suggest downward pressure on Alfi Inc. shares.
+5,ALKS,2021-06-30,Alkermes Presented New Data Analysis on Healthcare Resource Use Among Veterans With Alcohol Dependence,0.15,New data analysis may generate mild interest but lacks immediate financial impact.
+6,AMT,2021-06-30,1 Great Income Stock That Could Double Its Dividend,0.45,Positive earnings or guidance likely boosts dividend expectations.
+7,ANET,2021-06-28,"Should I Avoid Zscaler, Inc. (ZS)?",0.0,"Ambiguous question form implies uncertainty, with no clear positive or negative signal."
+8,ATOM,2021-06-30,Where Do Hedge Funds Stand On Atomera Incorporated (ATOM)?,0.0,Headline poses a question without clear directional bias or concrete information.
+9,AUB,2021-05-26,Why Atlantic Union (AUB) Stock Might be a Great Pick,0.25,Positive framing suggests potential interest but lacks concrete data.
+10,AXSM,2021-06-28,"How Many Axsome Therapeutics, Inc. (NASDAQ:AXSM) Shares Do Institutions Own?",0.0,The headline is a question about ownership and does not indicate positive or negative news.
+11,AYRO,2021-06-28,15 Best Very Cheap Stocks to Buy Right Now,0.15,Listicles of cheap stocks generate mild retail interest but lack strong directional impact.
+12,BCML,2021-06-30,Is Cedar Realty Trust Inc (CDR) A Good Stock To Buy?,0.0,The headline is a question with no clear positive or negative sentiment.
+13,BGFV,2021-06-18,Is SMMF Stock A Buy?,0.0,Headline poses a question without clear positive or negative sentiment.
+14,BGSF,2021-06-28,"Is Computer Task Group, Inc. (CTG) A Good Stock To Buy?",0.0,The headline poses a question without clear positive or negative information.
+15,BIPC,2021-06-26,These High-Yield Dividend Stocks Are Growing at Blazing Speeds,0.25,Positive sentiment toward high-yield dividend stocks may boost interest but lacks specific cataly...
+16,BLDR,2021-06-30,Builders FirstSource (BLDR) to Buy WTS Paradigm For $450M,0.68,"Strategic acquisition adds scale and diversification, signaling growth and operational strength."
+17,BLMN,2021-06-29,Bloomin' Brands (BLMN) Sees Hammer Chart Pattern: Time to Buy?,0.15,"Hammer pattern suggests potential reversal, but uncertainty remains on follow-through."
+18,BLNK,2021-06-28,Could This Be One Of The Best Ways To Play The EV Boom This Summer?,0.15,Uncertain phrasing and speculative tone suggest limited immediate impact.
+19,BRX,2021-06-30,Brixmor Property Group Issues Annual Corporate Responsibility Report,0.0,Routine corporate disclosure with no clear positive or negative market signal.
+20,CAMP,2021-06-29,Where Do Hedge Funds Stand On Aurora Mobile Limited (JG)?,0.0,Headline poses a question without clear directional bias or actionable information.
+21,CERN,2021-06-29,Cerner Stock Could See a Bump If It Gets Gobbled up By a Cloud Company,0.45,Potential acquisition interest adds speculative upside and short-term buying interest.
+22,CLVT,2021-06-30,A Sustainable Approach To Caring for the Environment,0.0,Headline lacks specific financial or operational impact on the company.
+23,CNA,2021-06-23,Is Sunrun Inc (RUN) Going to Burn These Hedge Funds?,0.65,Meme-driven retail hype suggests potential short-term squeeze pressure.
+24,CNSP,2021-06-29,Best Stock of the Day: Bsquare (BSQR). See What's Going On.,0.45,Viral attention and short-term hype typically drive moderate price increases.
+25,CNX,2021-05-28,Gas producer EQT Corp to buy private driller Alta Resources for $3 bln,0.65,"Major acquisition adds scale and assets, signaling growth and operational strength."
+26,CPF,2021-06-28,Is Loma Negra Compania Industrial Argentina Sociedad Anonima (LOMA) A Good Stock To Buy?,0.0,Neutral inquiry without clear positive or negative sentiment.
+27,CVX,2021-06-30,The Best Energy Dividend Stocks Of 2021,0.0,The headline is a general list and does not provide specific new information about any stock.
+28,DAL,2021-06-30,Jerome Powell’s hawkish tone on inflation takes the heat off Fed: strategist,0.15,"Fed easing expectations rise due to inflation concerns, but impact is indirect and uncertain."
+29,DIS,2021-06-30,Why Roku Stock Suddenly Jumped on Wednesday,0.45,Positive surprise or strong earnings likely drove the sudden jump.
+30,DOC,2021-06-24,Is Physicians Realty Trust a Buy?,0.0,Neutral inquiry with no clear positive or negative sentiment.
+31,DRI,2021-06-29,10 Best Dividend Stocks to Buy According to Billionaire Michael Hintze,0.25,Positive sentiment from a high-profile investor may attract retail interest.
+32,DSWL,2021-06-19,Interested In Deswell Industries' (NASDAQ:DSWL) Upcoming US$0.10 Dividend? You Have Four Days Left,0.15,Upcoming dividend is positive but typically has limited immediate price impact.
+33,DVA,2021-06-29,Is DaVita Inc (DVA) A Good Stock To Buy?,0.0,"The headline is a question with no clear positive or negative sentiment, implying uncertainty rat..."
+34,EBMT,2021-06-29,"Eagle Bancorp Montana, Inc. Announces Results of its Modified  Dutch Auction Tender",0.0,Tender results are typically neutral with no clear directional bias unless accompanied by strong...
+35,EGAN,2021-06-28,Where Do Hedge Funds Stand On Theratechnologies Inc. (THTX)?,0.0,The headline poses a question without clear directional bias or actionable information.
+36,EGBN,2021-06-30,"Eagle Bancorp, Inc. Announces Cash Dividend",0.25,Dividend announcements typically signal stability but may have limited immediate price impact.
+37,ESE,2021-06-24,Is ESCO Technologies' (NYSE:ESE) 133% Share Price Increase Well Justified?,0.0,"The headline raises a question without clear direction, implying uncertainty and lack of consensus."
+38,ESEA,2021-06-30,"Euroseas Ltd. Signs New Building Agreements for the Acquisition of Two Fuel Efficient 2,800 teu Feeder Containerships",0.45,New vessel acquisitions suggest fleet modernization and potential revenue growth.
+39,FFIN,2021-06-28,Planet Fitness Inc (PLNT) Fell Out Of Favor With Hedge Funds,-0.55,Hedge fund disfavor suggests reduced institutional confidence and potential near-term selling pre...
+40,FHTX,2021-06-30,Is Taseko Mines Limited (TGB) A Good Stock To Buy?,0.0,The headline is a question with no clear positive or negative information provided.
+41,FND,2021-06-29,"Floor &amp; Decor Holdings, Inc. Announces Joining CEO Action for Diversity &amp; Inclusion™",0.15,Corporate social responsibility initiatives typically have a minor positive impact.
+42,FORD,2021-06-25,Lucid Motors poised to compete with Tesla as leader in EV,0.45,Positive positioning as an emerging EV leader may attract investor interest.
+43,FORM,2021-06-25,FormFactor (FORM) Expands Product Portfolio Via New Alliance,0.45,New alliance suggests growth potential but lacks immediate financial impact.
+44,FUNC,2021-06-28,Should I Avoid DLH Holdings Corp. (DLHC)?,0.0,Neutral inquiry with no clear positive or negative sentiment.
+45,GBDC,2021-06-29,"Hedge Funds Are Buying Academy Sports and Outdoors, Inc. (ASO)",0.45,Institutional buying by hedge funds signals cautious optimism and potential accumulation.
+46,HOV,2021-06-28,Hovnanian Enterprises (NYSE:HOV) Is Experiencing Growth In Returns On Capital,0.45,Improved returns on capital suggest better efficiency and operational strength.
+47,HRTG,2021-06-22,Sidoti Summer Virtual Small-Cap Conference,0.0,Conference participation is routine and unlikely to move the stock.
+48,HUBS,2021-06-29,HubSpot Stock Composite Rating Reaches Stratosphere Amid Rapid Sales Growth,0.68,Strong sales growth boosts investor confidence and elevates stock ratings.
+49,IGMS,2021-06-29,"Hedge Funds Are Buying Academy Sports and Outdoors, Inc. (ASO)",0.45,Institutional buying by hedge funds suggests positive sentiment and potential short-term upside.
+50,IMVT,2021-06-28,Is Rattler Midstream LP (RTLR) A Good Stock To Buy?,0.0,"The headline is a question with no clear positive or negative sentiment, implying uncertainty."
+51,INMD,2021-06-16,Growth Stocks To Buy And Watch Include These Global Leaders On IBD's Stock Screener,0.15,General sector optimism with no specific stock mentioned.
+52,INVA,2021-06-19,Is CNXN Stock A Buy Here?,0.0,Uncertainty in the question form suggests no clear consensus or strong directional bias.
+53,IRIX,2021-05-11,Iridex Announces First Quarter 2021 Financial Results,0.0,Routine financial results disclosure with no clear positive or negative implications.
+54,JCI,2021-06-30,"DEWA appoints Ghantoot Group, Moro Hub, Johnson Controls and Microsoft to implement the latest technologies at its new Al Shera'a headquarters",0.45,New partnerships and tech implementation suggest positive momentum and growth potential.
+55,JHG,2021-06-30,Why Janus Henderson Group plc (JHG) is a Top Dividend Stock for Your Portfolio,0.25,Positive sentiment from being labeled a top dividend stock may attract income-focused investors.
+56,JJSF,2021-06-22,"Zacks.com featured highlights include: J &amp; J Snack Foods, Rocky Brands, Vista Outdoor, Sturm, Ruger &amp; Co and EuroDry",0.15,General sector optimism from being highlighted in a financial publication.
+57,LOPE,2021-06-05,Why Grand Canyon Education Stock Fell 16% in May,-0.65,Significant drop implies negative sentiment or poor performance impacting investor confidence.
+58,LPX,2021-06-28,Where Do Hedge Funds Stand On Popular Inc (BPOP)?,0.0,Headline poses a question without clear directional bias or actionable insight.
+59,LRCX,2021-06-30,"Dow Jones Futures: Apple Tests Buy Point In Market Rally As Tesla, Nio Loom; Micron Earnings Jump",0.45,Positive earnings surprise and broader market rally suggest upward momentum.
+60,MIRM,2021-06-24,Mirum Pharmaceuticals to Present at Piper Sandler’s Virtual EASL Takeaway Day,0.25,Conference presentation may generate modest investor interest.
+61,MMLP,2021-06-30,Is Corenergy Infrastructure Trust Inc (CORR) A Good Stock To Buy?,0.0,The headline is a question with no clear positive or negative sentiment or actionable information.
+62,MPAA,2021-06-14,Motorcar Parts of America (MPAA) Q4 2021 Earnings Call Transcript,0.0,Earnings call transcripts typically contain mixed or neutral information and are often already pr...
+63,MRK,2021-06-30,Merck to Hold Second-Quarter 2021 Sales and Earnings Conference Call on July 29,0.0,Routine earnings call announcement with no new information.
+64,NWE,2021-06-21,A Look At The Fair Value Of NorthWestern Corporation (NASDAQ:NWE),0.0,Fair value analysis typically lacks immediate directional bias without clear valuation surprises.
+65,PAVM,2021-06-14,"Tim Baxter, Former CEO of Samsung Electronics North America and Global Technology Industry Leader, Joins PAVmed Board of Directors",0.25,High-profile executive addition signals credibility boost but lacks immediate financial impact.
+66,PBFS,2021-06-28,"Hedge Funds Have Never Been This Bullish On Chicken Soup for the Soul Entertainment, Inc. (CSSE)",0.55,Strong institutional optimism may drive near-term buying interest.
+67,PETZ,2021-06-30,Assertio Holdings Inc. (ASRT) Fell Out Of Favor With Hedge Funds,-0.55,Hedge fund disfavor suggests reduced institutional support and potential near-term selling pressure.
+68,PFBC,2021-06-30,What Kind Of Investors Own Most Of Preferred Bank (NASDAQ:PFBC)?,0.0,The headline is ambiguous and does not provide clear positive or negative information about the s...
+69,PK,2021-06-30,Park Hotels &amp; Resorts Inc. Completes the Sale of the Hotel Indigo San Diego Gaslamp Quarter and Courtyard Washington Capitol Hill Navy Yard,0.25,Asset sales generate positive cash flow but are routine and not transformative.
+70,POOL,2021-06-30,10 Best ESG Stocks to Buy Now,0.15,General sector optimism with no specific stock impact.
+71,PYPL,2021-06-30,Paypal (PYPL) Stock Sinks As Market Gains: What You Should Know,-0.55,"PYPL underperforms despite broader gains, signaling near-term investor concerns."
+72,REKR,2021-06-30,"CLASS ACTION UPDATE for WISH, RLX and REKR: Levi &amp; Korsinsky, LLP Reminds Investors of Class Actions on Behalf of Shareholders",-0.35,Pending litigation may trigger investor uncertainty and short-term selling.
+73,REVB,2020-01-28,Revere Bank Announces Record Earnings for 2019 – Net Income of $31.70 Million Increased 14.7% Over 2018's Record Earnings,0.68,Strong earnings growth signals improved performance and investor optimism.
+74,RNGR,2020-05-06,Hotels eye Fed's Main Street loans as occupancy rates remain low,-0.25,Low occupancy and reliance on Fed loans signal weak recovery and financial strain.
+75,ROK,2021-06-30,Is NatWest Group plc (NWG) Going to Burn These Hedge Funds?,0.55,Hedge fund pressure and short squeeze potential could drive near-term buying frenzy.
+76,RTX,2021-06-29,Collins Aerospace advances zero-emission aviation with 500KW electric motor for Hybrid Air Vehicles' Airlander 10 aircraft,0.45,Innovation in zero-emission aviation signals positive momentum but lacks immediate financial impact.
+77,SBNY,2021-06-28,Hedge Funds Have Never Been This Bullish On Signature Bank (SBNY),0.65,Strong institutional confidence signals potential upside in the near term.
+78,SGC,2021-06-28,Superior Group of Companies (NASDAQ:SGC) Shareholders Will Want The ROCE Trajectory To Continue,0.15,Positive sentiment on ROCE trajectory suggests improving efficiency and potential long-term value.
+79,SJ,2021-05-26,Scienjoy Reports Unaudited First Quarter 2021 Financial Results,0.0,Routine financial update with no clear positive or negative implications.
+80,SKIL,2021-06-21,"Skillsoft Launches Debt Refinancing and Comments on Combined Results for the Quarter Ended April 30, 2021",0.0,Debt refinancing is routine and neutral; no clear positive or negative signal in the headline.
+81,SLNG,2021-06-01,"Stabilis Solutions Acquires LNG Production Facility in Port Allen, Louisiana",0.55,Strategic acquisition adds production capacity and signals growth expansion.
+82,SNGX,2021-06-23,"50+ Companies to Present at the Access to Giving Virtual Investor Conference on July 13th - 15th, 2021",0.15,Conference exposure may generate modest investor interest.
+83,SO,2021-06-30,"Georgia Power Foundation announces $500,000 investment in Georgia Justice Project initiative",0.25,Community-focused investment may boost sentiment but lacks direct financial impact.
+84,STAA,2021-06-30,What Makes Staar Surgical (STAA) a Strong Momentum Stock: Buy Now?,0.25,"Uncertain tone from phrasing ""a Strong Momentum Stock: Buy Now?"" suggests mixed or speculative se..."
+85,SWKS,2021-06-30,Skyworks Solutions (SWKS) Outpaces Stock Market Gains: What You Should Know,0.45,Positive earnings or performance outpacing the market typically drives moderate buying interest.
+86,TBI,2021-06-29,"With a Focus on Putting Work Within Reach™, Margaret Tuohy Joins PeopleReady to Lead Product Innovation",0.15,New leadership hire signals potential product improvements but lacks immediate financial impact.
+87,TFX,2021-06-28,Teleflex Completes Divestiture of Respiratory Assets to Medline Industries,0.45,"Divestiture reduces complexity and focuses core operations, seen as a modest positive."
+88,TRN,2021-06-23,Hedge Funds Have Never Been This Bullish On Outfront Media Inc. (REIT) (OUT),0.55,Strong institutional bullishness suggests potential near-term upside.
+89,TSBK,2021-06-28,"Where Do Hedge Funds Stand On Timberland Bancorp, Inc. (TSBK)?",0.0,The headline poses a question without clear directional information or new developments.
+90,TSE,2021-06-29,"Hedge Funds Are Buying Academy Sports and Outdoors, Inc. (ASO)",0.45,Institutional buying by hedge funds signals cautious optimism and potential accumulation.
+91,TTGT,2021-06-30,"TechTarget to Announce 2021 Second Quarter Financial Results on August 4, 2021",0.0,Routine earnings announcement with no indication of positive or negative surprises.
+92,ULCC,2021-06-17,Home Chef Expands Partnership with Points; Adds Frontier Airlines as a New Loyalty Partner,0.35,New loyalty partnerships can drive customer engagement and revenue growth.
+93,VECO,2021-06-29,Here's Why Veeco Instruments (NASDAQ:VECO) Can Manage Its Debt Responsibly,0.25,Positive debt management signals stability but lacks immediate earnings or growth impact.
+94,VEL,2021-06-30,3 Mortgage &amp; Related Services Stocks to Battle Industry Woes,0.15,"Sector-specific challenges may weigh, but stock selection hints at cautious optimism."
+95,VMEO,2021-06-22,Vimeo Stock: Can It Stream Profits for Investors?,0.0,Uncertain outlook with no clear positive or negative signal.
+96,VRNS,2021-06-17,Varonis Systems Stock Shows Rising Relative Strength As Software Sector Rebounds; Prepping For New Run?,0.35,Rising relative strength and sector rebound suggest cautious optimism.
+97,VRSN,2021-06-23,"Is Verisign, Inc. (VRSN) A Good Stock To Buy?",0.0,"The headline is a question with no clear positive or negative sentiment, implying uncertainty rat..."
+98,WMT,2021-06-30,Walmart de Mexico to allow older grocery packers back in stores,0.15,Returning older workers may signal labor flexibility but lacks immediate financial impact.
+99,WSR,2021-06-30,Do Hedge Funds Love Motorsport Games Inc. (MSGM)?,0.0,Headline poses a question without clear positive or negative information.
+100,XYL,2021-06-23,Here is What Hedge Funds Think About KeyCorp (KEY),0.0,No clear directional bias implied; the headline is neutral and informational.

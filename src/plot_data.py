@@ -6,9 +6,9 @@ import numpy as np
 from scipy import stats
 
 # File paths - change these variables to use different files
-MERGED_DATA_FILE = "CampusChallenge-Group-15/results/Merged_Data(v5_without_Regime).csv"
-OUTPUT_DIR = "CampusChallenge-Group-15/results/plots_v5_without_Regime"
-STATS_OUTPUT_FILE = "CampusChallenge-Group-15/results/Plot_Statistics_v5_without_Regime.csv"
+MERGED_DATA_FILE = "CampusChallenge-Group-15/results/Merged Data/Merged_Data_v6(Full-Test_Data)_non-adjusted.csv"
+OUTPUT_DIR = "CampusChallenge-Group-15/results/Plots/plots_v6_FullData_non-adjusted"
+STATS_OUTPUT_FILE = "CampusChallenge-Group-15/results/Score Statistics/Plot_Statistics_v6_FullData_non-adjusted.csv"
 
 def plot_ticker_data(merged_file, output_dir, stats_output_file):
     """
@@ -17,6 +17,7 @@ def plot_ticker_data(merged_file, output_dir, stats_output_file):
     Args:
         merged_file: Path to the merged data CSV file
         output_dir: Directory to save the plot images
+        stats_output_file: Path to save the statistics CSV file
     """
     import os
     

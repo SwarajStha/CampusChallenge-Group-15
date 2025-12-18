@@ -7,11 +7,11 @@ from prompt_engine import load_system_prompt, build_messages
 from sentiment_analysis import parse_llm_response
 
 # Use paths from src directory
-PROMPT_PATH = "CampusChallenge-Group-15/prompts/prompt_v5(without_Regime).txt"
-DATA_PATH = "CampusChallenge-Group-15/sample-data/Prompt_Testing_Data_1.csv"
-RESULTS_DIR = "CampusChallenge-Group-15/results"
+PROMPT_PATH = "CampusChallenge-Group-15/prompts/prompt_v6.txt"
+DATA_PATH = "CampusChallenge-Group-15/sample-data/Full_TestData.csv"
+RESULTS_DIR = "CampusChallenge-Group-15/results/Decision Testing Scores"
 
-def get_next_filename(base="Decision_Testing", ext=".csv", directory=RESULTS_DIR):
+def get_next_filename(base="Decision_Testing_Full", ext=".csv", directory=RESULTS_DIR):
     """Find the next available filename with incremental numbering."""
     # Look for files in the specified directory
     pattern = os.path.join(directory, f"{base}*{ext}")
@@ -38,9 +38,15 @@ def main():
         print(f"Processing {idx+1}/{len(df)}")
         print(f"Ticker: {row['ticker']}")
         print(f"Headline: {row['title']}")
+        
+        # Check if tags column exists
+        tags = row.get('tags', None) if 'tags' in df.columns else None
+        if tags:
+            print(f"Tags: {tags}")
+        
         print(f"{'-'*80}")
         
-        messages = build_messages(system_prompt, row['title'])
+        messages = build_messages(system_prompt, row['title'], tags)
         raw_output = call_groq(messages)
         
         print(f"🔍 RAW LLM OUTPUT:")

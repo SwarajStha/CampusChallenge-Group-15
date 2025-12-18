@@ -1,8 +1,17 @@
-# requirements.txt
-groq>=0.9.0
-pandas>=2.0.0
-numpy>=1.24.0
-python-dotenv>=1.0.0
-scipy>=1.10.0
-matplotlib>=3.7.0
-seaborn>=0.12.0
+# Campus Challenge - Investing with AI
+# Python package requirements
+
+# API and Environment
+groq>=0.9.0              # LLM API for sentiment analysis
+python-dotenv>=1.0.0     # Environment variable management
+
+# Data Processing
+pandas>=2.0.0            # Data manipulation and analysis
+numpy>=1.24.0            # Numerical operations
+
+# Visualization and Statistics
+matplotlib>=3.7.0        # Plotting library (used in plot_data.py, plot_data_monthly.py)
+scipy>=1.10.0            # Statistical functions (correlation, regression)
+
+# Optional (not currently used but available for future visualizations)
+# seaborn>=0.12.0        # Statistical data visualization
