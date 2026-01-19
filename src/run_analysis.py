@@ -2,16 +2,21 @@
 import os
 import pandas as pd
 import glob
+import re
 from api_client import call_groq
 from prompt_engine import load_system_prompt, build_messages
 from sentiment_analysis import parse_llm_response
 
-# Use paths from src directory
-PROMPT_PATH = "CampusChallenge-Group-15/prompts/prompt_v6.txt"
-DATA_PATH = "CampusChallenge-Group-15/sample-data/Full_TestData.csv"
+# Configuration
+DATA_PATH = "CampusChallenge-Group-15/sample-data/API_test.csv"
 RESULTS_DIR = "CampusChallenge-Group-15/results/Decision Testing Scores"
 
-def get_next_filename(base="Decision_Testing_Full", ext=".csv", directory=RESULTS_DIR):
+# Switch between prompt versions here
+# PROMPT_PATH = "CampusChallenge-Group-15/prompts/prompt_v6.txt"  # Two-message format
+PROMPT_PATH = "CampusChallenge-Group-15/prompts/prompt_v8.txt"  # Single-message with placeholders
+
+
+def get_next_filename(base="Decision_Testing", ext=".csv", directory=RESULTS_DIR):
     """Find the next available filename with incremental numbering."""
     # Look for files in the specified directory
     pattern = os.path.join(directory, f"{base}*{ext}")

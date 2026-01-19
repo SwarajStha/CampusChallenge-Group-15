@@ -1,0 +1,35 @@
+Cleaning data...
+Removed 3 rows with NaN/infinite values
+Remaining data points: 7583
+
+Overall Pearson Correlation: 0.0129
+Mean Score: 0.2903
+Mean RET: 0.2122%
+Std Score: 0.3883
+Std RET: 3.8457%
+============================================================
+AGGREGATE ANALYSIS SUMMARY
+============================================================
+Total Observations: 7,583
+Unique Tickers: 98
+
+Pearson Correlation: 0.0129
+Spearman Correlation: 0.0154
+
+Score Distribution:
+  Mean: 0.2903
+  Median: 0.3500
+  Std Dev: 0.3883
+  Range: [-0.8500, 0.8800]
+  Positive: 81.38%
+  Negative: 17.05%
+  Neutral: 1.57%
+
+Return Distribution:
+  Mean: 0.2122%
+  Median: 0.1655%
+  Std Dev: 3.8457%
+  Range: [-27.5679%, 108.8462%]
+  Positive: 53.33%
+  Negative: 46.29%
+============================================================

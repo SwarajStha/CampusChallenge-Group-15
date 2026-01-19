@@ -6,3 +6,7 @@ __pycache__/
 venv/
 .DS_Store
 Thumbs.db
+
+# Local/raw datasets (keep out of git; some files exceed GitHub limits)
+All_RAW_Returns/*.csv
+All_RAW_Returns/Extracted Files/*.csv
