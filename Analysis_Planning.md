@@ -428,6 +428,82 @@ A good grading-friendly summary pattern:
 
 ---
 
+## 12) Decision Log (lock these before implementation)
+
+This is the short list of decisions that determine *most* downstream results. Locking them early makes your results reproducible and makes it easier to justify choices in the final report.
+
+### DL1 — Rebalance frequency (primary spec)
+- Decision: weekly vs monthly
+- Recommendation: **monthly** as primary (implementable + cleaner inference), **weekly** as robustness.
+
+### DL2 — Signal definition (what exactly is ranked)
+- Decision: which sentiment column(s) define the signal
+- Recommendation:
+  - Primary: daily `Sentiment_Score`, aggregated to the rebalance period by mean.
+  - Robustness: run the same pipeline with `NOVICE` and `FANATIC` (and optionally `REGIME` splits).
+
+### DL3 — Signal timing and matching (avoid look-ahead)
+- Decision: strict `t + 1 day` merge vs “next trading day” merge
+- Recommendation:
+  - Prefer “next trading day” mapping for each (ticker, `date_day`) to avoid losing Friday/holiday headlines.
+  - If you keep strict +1 day (simpler), report the match rate / dropped observations.
+
+### DL4 — Universe filters (what stocks are eligible each rebalance)
+- Decision: minimum data requirements per ticker and per rebalance date
+- Recommendation (starting point; adjust after you inspect coverage):
+  - Per rebalance date: require at least ~30–50 tickers with valid signals/returns.
+  - Per ticker: require a minimum number of trading days in 2024 (e.g., ≥ 120) and minimum signal days (e.g., ≥ 5–10).
+
+### DL5 — Portfolio buckets (how long/short legs are formed)
+- Decision: quantile cutoffs
+- Recommendation:
+  - Primary: top 20% long / bottom 20% short.
+  - Robustness: 10% (more extreme, higher turnover) and 30% (more diversified).
+
+### DL6 — Weighting scheme (equal-weight vs value-weight)
+- Decision: how you weight names within each leg
+- Recommendation:
+  - Primary: equal-weight (robust, simplest).
+  - Robustness: value-weight using `MV_USD_lag`.
+  - Optional safety: cap single-name weights (e.g., 5–10%) to avoid one-stock domination.
+
+### DL7 — Missing returns during holding periods
+- Decision: what to do if a constituent has a missing `RET` on a day
+- Recommendation:
+  - Drop the missing observation for that day and **renormalize weights** across remaining constituents (preferred).
+  - Avoid filling missing returns with 0 (biases results).
+
+### DL8 — Return definition and compounding
+- Decision: how to aggregate daily returns to weekly/monthly
+- Recommendation:
+  - Use geometric compounding inside the period: `Π(1 + r_d) - 1`.
+  - Use the same approach for portfolio and individual stock summaries.
+
+### DL9 — Risk-free rate and Sharpe definition
+- Decision: assume `rf = 0` vs use factor `RF`
+- Recommendation:
+  - Use `RF` from the same factor dataset used for CAPM/FF regressions.
+  - If you temporarily use `rf = 0`, label the metric “Sharpe (rf≈0)” and treat as descriptive.
+
+### DL10 — Factor data source and units (CAPM / FF3 / FF5)
+- Decision: where factors come from and whether values are in % or decimals
+- Recommendation:
+  - Use Kenneth French factors at the matching frequency (daily if your portfolio returns are daily; monthly if you only compute monthly returns).
+  - Standardize units immediately (e.g., convert percent to decimals once, then keep consistent everywhere).
+
+### DL11 — Statistical inference settings
+- Decision: standard errors for alpha and Fama–MacBeth
+- Recommendation:
+  - Use Newey–West (HAC) standard errors.
+  - Choose a lag rule consistent with your frequency (e.g., 5–10 lags for daily; 3–6 for monthly), and report it.
+
+### DL12 — Transaction cost / turnover robustness
+- Decision: whether to report post-cost performance
+- Recommendation:
+  - Report at least one simple haircut based on turnover (e.g., 10–50 bps per 100% turnover per rebalance) and show weekly vs monthly sensitivity.
+
+---
+
 ## Appendix A — Column mapping (current data files)
 
 ### A1) Sentiment source (`Extracted_file (7).csv`)
