@@ -53,6 +53,20 @@ def extract_regime(text):
     match = re.search(r'REGIME[:\s]*([A-Z]+)', text)
     return match.group(1) if match else ""
 
+def extract_ticker_from_sentiment(text):
+    """Extract ticker value after 'Ticker' in sentiment"""
+    if pd.isna(text) or not isinstance(text, str):
+        return ""
+    match = re.search(r'Ticker[:\s]*([A-Z0-9]+)', text)
+    return match.group(1) if match else ""
+
+def extract_final_weighted(text):
+    """Extract decimal value after FINAL_WEIGHTED"""
+    if pd.isna(text) or not isinstance(text, str):
+        return None
+    match = re.search(r'FINAL_WEIGHTED[:\s]*(-?[\d.]+)', text)
+    return float(match.group(1)) if match else None
+
 def extract_line2(text):
     """Extract text after 'Line 2:'"""
     if pd.isna(text) or not isinstance(text, str):
@@ -128,6 +142,7 @@ def main():
     # Extract from sentiment column
     if 'sentiment' in df.columns:
         extracted_df['Headline'] = df['sentiment'].apply(extract_headline)
+        extracted_df['Ticker(in_sentiment)'] = df['sentiment'].apply(extract_ticker_from_sentiment)
         extracted_df['NOVICE'] = df['sentiment'].apply(extract_novice_score)
         extracted_df['FANATIC'] = df['sentiment'].apply(extract_fanatic_score)
         extracted_df['DAY/SWING'] = df['sentiment'].apply(extract_dayswing_score)
@@ -137,6 +152,14 @@ def main():
     
     # Calculate final sentiment score
     extracted_df['Sentiment_Score'] = extracted_df.apply(calculate_sentiment_score, axis=1)
+    # Round to 6 decimal places
+    extracted_df['Sentiment_Score'] = extracted_df['Sentiment_Score'].round(6)
+    
+    # Extract Final_Weighted from sentiment column for comparison
+    if 'sentiment' in df.columns:
+        extracted_df['Final_Weighted'] = df['sentiment'].apply(extract_final_weighted)
+        # Round to 6 decimal places
+        extracted_df['Final_Weighted'] = extracted_df['Final_Weighted'].round(6)
     
     # Filter out rows with missing required fields
     print("Filtering out incomplete rows...")
@@ -155,6 +178,14 @@ def main():
     rows_after = len(extracted_df)
     rows_removed = rows_before - rows_after
     
+    # Filter out rows with Ticker mismatches
+    print("Filtering out rows with Ticker mismatches...")
+    rows_before_ticker_filter = len(extracted_df)
+    extracted_df = extracted_df[extracted_df['Ticker'] == extracted_df['Ticker(in_sentiment)']]
+    rows_after_ticker_filter = len(extracted_df)
+    ticker_mismatches_removed = rows_before_ticker_filter - rows_after_ticker_filter
+    ticker_mismatch_percentage = (ticker_mismatches_removed / rows_before * 100) if rows_before > 0 else 0
+    
     # Get unique filename
     output_file = get_unique_filename(output_dir, "Extracted_file", ".csv")
     
@@ -162,6 +193,7 @@ def main():
     extracted_df.to_csv(output_file, index=False)
     print(f"Data extracted successfully!")
     print(f"Rows removed due to missing data: {rows_removed}")
+    print(f"Rows removed due to Ticker mismatches: {ticker_mismatches_removed} ({ticker_mismatch_percentage:.2f}% of initial rows)")
     print(f"Output saved to: {output_file}")
     print(f"Total rows in final file: {len(extracted_df)}")
 
