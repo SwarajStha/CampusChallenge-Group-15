@@ -4,9 +4,9 @@
 This section details the comprehensive data cleaning and extraction process applied to the raw sentiment analysis data contained in `sentiments_group 15.csv`. The process involves parsing unstructured text data, extracting structured information, calculating sentiment scores, and implementing multiple validation and filtering steps to ensure data quality and integrity.
 
 #### Summary of clean-up
-Rows removed due to missing data: 92
-Rows removed due to Ticker mismatches: 1272 (2.14% of initial rows)
-Total rows in final file: 58136
+Rows removed due to missing data: 92.
+Rows removed due to Ticker mismatches: 1272 (2.14% of initial rows).
+Total rows in final file: 58136.
 
 ## 1. Data Extraction Process
 
