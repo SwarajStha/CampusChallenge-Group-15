@@ -52,6 +52,10 @@ def main():
     print(f"\nSample of cleaned dates:")
     print(filtered_returns['date'].head(10).to_string())
     
+    # Sort by TICKER first, then by date
+    print("\nSorting data by TICKER and date...")
+    filtered_returns = filtered_returns.sort_values(by=['TICKER', 'date'], ascending=[True, True])
+    
     # Save the cleaned data
     print(f"\nSaving cleaned data to {OUTPUT_FILE}...")
     filtered_returns.to_csv(OUTPUT_FILE, index=False)
