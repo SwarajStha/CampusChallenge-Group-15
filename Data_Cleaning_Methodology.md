@@ -114,3 +114,77 @@ The extraction script provides comprehensive reporting metrics:
 The cleaning process successfully identified approximately 1,272 records with ticker mismatches, representing a significant data quality issue in the original dataset. These records were systematically removed to ensure the final dataset contains only validated, high-quality sentiment analysis results suitable for downstream financial analysis and modeling applications.
 
 This rigorous multi-stage cleaning methodology ensures that the final dataset maintains high standards of accuracy, consistency, and reliability for subsequent investment analysis and decision-making processes.
+
+---
+
+## 7. Daily Returns Data Cleaning Process
+
+### 7.1 Overview
+After cleaning the sentiment headline data, a parallel cleaning process was applied to the daily stock returns data to ensure alignment and compatibility between the two datasets. The script `data_cleanup_returns.py` performs ticker-based filtering and date format standardization on `daily_return_data_datefiltered.csv`.
+
+### 7.2 Rationale for Returns Data Cleaning
+
+**Ticker Filtering:**
+- The raw daily returns dataset contained 4,177 unique tickers covering a broad universe of stocks.
+- The sentiment analysis dataset only covered 1,111 tickers (those with news headlines during the analysis period).
+- **Problem**: Retaining 3,066 additional tickers with no corresponding sentiment data would be useless for portfolio evaluation, as our strategy relies on sentiment signals to make trading decisions.
+- **Solution**: Filter the returns dataset to include only the 1,111 tickers present in the sentiment file.
+- **Benefits**:
+  - Improves data processing efficiency
+  - Reduces file size by ~73% (from 524,343 to 142,266 records)
+  - Ensures perfect alignment between sentiment and returns for subsequent portfolio analysis
+
+**Date Format Standardization:**
+- The raw returns data contained dates in timestamp format: `2024-11-14 00:00:00`
+- For merging and analysis purposes, only the date component is needed: `2024-11-14`
+- **Solution**: Convert dates to `YYYY-MM-DD` format by removing the time component.
+- **Benefits**:
+  - Simplifies date matching between sentiment and returns datasets
+  - Reduces storage overhead
+  - Improves human readability
+
+### 7.3 Cleaning Process Results
+
+**Input Data:**
+```
+Returns records: 524,343
+Unique tickers in returns: 4,177
+Unique tickers in sentiment: 1,111
+```
+
+**Filtering Results:**
+```
+Valid tickers (from sentiment file): 1,111
+Records after ticker filtering: 142,266
+Unique tickers after filtering: 1,111
+```
+
+**Date Format Sample (After Cleaning):**
+```
+0    2024-09-19
+1    2024-07-23
+2    2024-07-24
+3    2024-07-25
+```
+
+**Summary:**
+```
+Original records: 524,343
+Cleaned records: 142,266
+Records removed: 382,077 (72.9% reduction)
+Unique tickers: 1,111
+Date range: 2024-07-01 to 2024-12-31
+
+Tickers removed (not in sentiment data): 3,066
+Sample of removed tickers: ['AACI', 'AACT', 'AAM', 'AAME', 'AAOI', 'AAT', 
+                             'ABAT', 'ABCL', 'ABEO', 'ABL']
+```
+
+### 7.4 Output File
+The cleaned daily returns data is saved to `daily_return_data_cleaned.csv` in the `data/` directory, containing:
+- Standardized date format (YYYY-MM-DD)
+- Only tickers with corresponding sentiment data (1,111 tickers)
+- Complete daily return series for 2024-07-01 to 2024-12-31
+- All original return metrics (PRC, RET, SHROUT, MV_USD, MV_USD_lag)
+
+This alignment ensures that the portfolio construction and backtesting phases can efficiently merge sentiment signals with stock returns without encountering missing data or ticker mismatches.

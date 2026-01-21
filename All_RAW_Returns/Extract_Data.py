@@ -187,7 +187,7 @@ def main():
     ticker_mismatch_percentage = (ticker_mismatches_removed / rows_before * 100) if rows_before > 0 else 0
     
     # Get unique filename
-    output_file = get_unique_filename(output_dir, "Extracted_file", ".csv")
+    output_file = get_unique_filename(output_dir, "Final Extracted File", ".csv")
     
     # Save to CSV
     extracted_df.to_csv(output_file, index=False)
