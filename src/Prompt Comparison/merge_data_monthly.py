@@ -1,11 +1,16 @@
 # merge_data_monthly.py
 import pandas as pd
 from pandas.tseries.offsets import DateOffset
+import os
+
+# Get project root (go up two levels from src/Prompt Comparison/)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.join(script_dir, '..', '..')  # Go up to project root
 
 # File paths - change these variables to use different files
-MONTHLY_SCORES_FILE = "CampusChallenge-Group-15/results/Merged Data/Monthly_Averaged_Score_v6(Full-Test_Data).csv"
-MONTHLY_RETURNS_FILE = "CampusChallenge-Group-15/sample-data/Full_TestData_MonthlyReturns.csv"
-OUTPUT_FILE = "CampusChallenge-Group-15/results/Merged Data/Merged_Monthly_Data_v6(Full-Test_Data).csv"
+MONTHLY_SCORES_FILE = os.path.join(project_root, 'Statistics', 'Prompt Testing Phase', 'Merged Data (Test Data - Prompt Evaluation)', 'Monthly_Averaged_Score_v6(Full-Test_Data).csv')
+MONTHLY_RETURNS_FILE = os.path.join(project_root, 'data', 'data (sample and setup)', 'Full_TestData_MonthlyReturns.csv')
+OUTPUT_FILE = os.path.join(project_root, 'Statistics', 'Prompt Testing Phase', 'Merged Data (Test Data - Prompt Evaluation)', 'Merged_Monthly_Data_v6(Full-Test_Data).csv')
 
 def merge_monthly_datasets(monthly_scores_file, monthly_returns_file, output_file):
     """

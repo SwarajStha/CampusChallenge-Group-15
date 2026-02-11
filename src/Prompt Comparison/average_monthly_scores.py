@@ -53,8 +53,12 @@ def average_monthly_scores(input_file, output_file):
 
 
 if __name__ == "__main__":
+    # Get project root (go up two levels from src/Prompt Comparison/)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.join(script_dir, '..', '..')  # Go up to project root
+    
     # Define paths
-    RESULTS_DIR = "CampusChallenge-Group-15/results/Merged Data"
+    RESULTS_DIR = os.path.join(project_root, 'Statistics', 'Prompt Testing Phase', 'Merged Data (Test Data - Prompt Evaluation)')
     INPUT_FILE = os.path.join(RESULTS_DIR, "Merged_Data_v6(Full-Test_Data).csv")
     OUTPUT_FILE = os.path.join(RESULTS_DIR, "Monthly_Averaged_Score_v6(Full-Test_Data).csv")
     

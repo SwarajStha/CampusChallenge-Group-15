@@ -9,10 +9,13 @@ Cleans the daily return data by:
 import pandas as pd
 import os
 
-# File paths
-RETURNS_FILE = "CampusChallenge-Group-15\data\daily_return_data_datefiltered.csv"
-SENTIMENT_FILE = "CampusChallenge-Group-15\All_RAW_Returns\Extracted Files\Final Extracted File.csv"
-OUTPUT_FILE = "CampusChallenge-Group-15\data\daily_return_data_cleaned.csv"
+# File paths (relative to project root)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.join(script_dir, '..', '..')  # Go up to project root
+
+RETURNS_FILE = os.path.join(project_root, 'data', 'daily_return_data_datefiltered.csv')
+SENTIMENT_FILE = os.path.join(project_root, 'All_RAW_Returns', 'Extracted Files', 'Final Extracted File.csv')
+OUTPUT_FILE = os.path.join(project_root, 'data', 'daily_return_data_cleaned.csv')
 
 def main():
     # Read the datasets

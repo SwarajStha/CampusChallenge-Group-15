@@ -30,12 +30,15 @@ from datetime import datetime, timedelta
 
 warnings.filterwarnings('ignore')
 
-# File paths
-DATA_DIR = "."
-OUTPUT_DIR = "../results/Fama_MacBeth"
+# File paths (relative to project root)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.join(script_dir, '..', '..')  # Go up to project root
+
+DATA_DIR = os.path.join(project_root, 'data')
+OUTPUT_DIR = os.path.join(project_root, 'Statistics', 'Fama_MacBeth Statistics')
 
 # Signal/return panel file
-PANEL_FILE = "signal_return_panel_cleaned(2).csv"  # Use the latest cleaned version
+PANEL_FILE = os.path.join(DATA_DIR, 'signal_return_panel_cleaned(2).csv')  # Use the latest cleaned version
 
 # Rebalancing configurations
 REBALANCE_CONFIGS = {

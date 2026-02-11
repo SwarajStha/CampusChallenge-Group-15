@@ -3,11 +3,16 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy import stats
 import seaborn as sns
+import os
+
+# Get project root (go up two levels from src/Prompt Comparison/)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.join(script_dir, '..', '..')  # Go up to project root
 
 # File paths - change these variables to use different files
-MERGED_DATA_FILE = "CampusChallenge-Group-15/results/Merged Data/Merged_Data_v6(Full-Test_Data).csv"
-OUTPUT_DIR = "CampusChallenge-Group-15/results/Plots/Aggregate Analysis"
-STATS_OUTPUT_FILE = "CampusChallenge-Group-15/results/Score Statistics/Aggregate_Statistics.csv"
+MERGED_DATA_FILE = os.path.join(project_root, 'Statistics', 'Prompt Testing Phase', 'Merged Data (Test Data - Prompt Evaluation)', 'Merged_Data_v6(Full-Test_Data).csv')
+OUTPUT_DIR = os.path.join(project_root, 'Figures and Tables', 'Plots Used For Prompt Evaluation', 'Aggregate Analysis')
+STATS_OUTPUT_FILE = os.path.join(project_root, 'Statistics', 'Prompt Testing Phase', 'Score Statistics Used For Prompt Evaluation', 'Aggregate_Statistics.csv')
 
 def create_aggregate_analysis(merged_file, output_dir, stats_output_file):
     """

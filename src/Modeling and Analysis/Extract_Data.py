@@ -108,9 +108,12 @@ def get_unique_filename(directory, base_name, extension):
         counter += 1
 
 def main():
-    # Define file paths
-    input_file = r"c:\Users\swara\OneDrive - TUM\Sem 1\Campus Challenge - Investing with AI\CampusChallenge-Group-15\All_RAW_Returns\sentiments_group 15.csv"
-    output_dir = r"c:\Users\swara\OneDrive - TUM\Sem 1\Campus Challenge - Investing with AI\CampusChallenge-Group-15\All_RAW_Returns\Extracted Files"
+    # Define file paths (relative to project root)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    project_root = os.path.join(script_dir, '..', '..')  # Go up to project root
+    
+    input_file = os.path.join(project_root, 'All_RAW_Returns', 'sentiments_group 15.csv')
+    output_dir = os.path.join(project_root, 'All_RAW_Returns', 'Extracted Files')
     
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)

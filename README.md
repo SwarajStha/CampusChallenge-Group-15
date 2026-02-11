@@ -6,11 +6,11 @@ Just downloading this directory will not run the code as the Git upload is ignor
 
 **Sentiment-Based Trading Strategy Performance (July-December 2024)**
 
-✅ **+119% Total Return** (weekly value-weighted long-short strategy over 6 months)  
+✅ **+14.95% Raw Total Return** (weekly value-weighted long-short strategy over 6 months, 32.73% annualized)  
 ✅ **+35.48% Gross Alpha** (Fama-French 5-Factor model, annualized)  
 ✅ **+27.27% Net Alpha** after realistic transaction costs (20 bps per round-trip)  
 ✅ **t=3.50*** Cross-Sectional Significance (Fama-MacBeth monthly, p<0.01)  
-✅ **Factor Independence**: Near-zero betas (Market: -0.20, SMB: -0.20, HML: 0.03), Low R² (28%)  
+✅ **Factor Exposures**: Negative market beta (-0.82), strong profitability/investment tilts (-0.80, -0.86), Low R² (28%)  
 ✅ **Asymmetric Signal Power**: Short leg drives performance (-38.70% alpha vs +1.82% long)  
 
 **Strategic Insights:**
@@ -31,6 +31,7 @@ CampusChallenge-Group-15/
 ├── .env                              ← API key (not tracked in git)
 ├── requirements.txt                  ← Python dependencies
 ├── README.md
+├── Can ChatGPT Forecast Stock Price Movements.pdf  ← Reference paper
 │
 ├── Documentations/                   ← Project documentation
 │   ├── Analysis Planning (Now-Redundant).md  ← Project planning notes
@@ -43,7 +44,8 @@ CampusChallenge-Group-15/
 │   ├── walkthrough.md                ← Step-by-step project guide
 │   └── Final Summaries/              ← Comprehensive reports
 │       ├── Executive_Summary.md      ← Full analysis report (50+ pages)
-│       └── Presentation_Slides.md    ← Presentation deck (15 slides)
+│       ├── Presentation_Slides.md    ← Presentation deck (15 slides)
+│       └── Summarized_Results_Table.md ← Results summary table
 │
 ├── All_RAW_Returns/                  ← Raw sentiment and return data
 │   ├── data_analysis.ipynb           ← Quality assurance and validation notebook
@@ -63,31 +65,17 @@ CampusChallenge-Group-15/
 │   ├── signal_return_panel_cleaned(2).csv ← Final cleaned panel
 │   ├── train_return_data_daily.csv   ← Training data (daily frequency)
 │   ├── Full Extracted File (sorted).csv ← Sorted sentiment data
+│   ├── data (sample and setup)/      ← Sample data for testing and setup files
 │   ├── Fama_French/                  ← Fama-French factor data
 │   │   ├── F-F_Research_Data_Factors_daily.csv
 │   │   ├── F-F_Research_Data_5_Factors_2x3_daily.csv
 │   │   └── ... (monthly versions)
 │   └── Panel_Validation/             ← Panel validation outputs
 │
-├── Portfolio/                        ← Portfolio backtesting and analysis
-│   ├── portfolio_backtest.py         ← Portfolio construction and backtesting
-│   ├── Analysis_Notes.md             ← Portfolio analysis documentation
-│   ├── portfolio_comparison_all_configs.csv ← Configuration comparison results
-│   ├── portfolio_returns_*.csv       ← Returns by strategy (weekly/monthly, equal/value)
-│   └── portfolio_summary_*.csv       ← Performance summaries by strategy
-│
-├── sample-data/                      ← Sample data for testing
-│   ├── API_test.csv
-│   ├── API_test_v2.csv
-│   ├── Daily_Return_Matching_PTD_1.csv
-│   ├── Full_TestData.csv
-│   ├── Full_TestData_DailyReturns.csv
-│   ├── Full_TestData_MonthlyReturns.csv
-│   ├── Monthly_Return_Data_sample.csv
-│   └── Prompt_Testing_Data_1.csv
-│
-├── Prompt Resources/                 ← Prompting ideas and notes
-│   └── Prompting Idea Notes.txt
+├── Prompt References/                ← Reference papers and prompting ideas
+│   ├── Prompting Idea Notes.txt      ← Prompting strategy notes
+│   ├── Game-on Social networks and markets.pdf
+│   └── Understanding Heterogeneity of Investor Sentiment on Social media.pdf
 │
 ├── prompts/                          ← Prompt engineering versions
 │   ├── prompt_v1.txt
@@ -98,6 +86,8 @@ CampusChallenge-Group-15/
 │   ├── prompt_v5(only_score_reason).txt  ← Clean output format (no intermediate reasoning)
 │   ├── prompt_v5(without_Regime).txt     ← Equal weights, no regime detection
 │   ├── prompt_v6.txt                 ← Includes tags for article context
+│   ├── prompt_v7.txt                 ← Further refined version
+│   ├── prompt_v8 (FINAL).txt         ← Final optimized prompt version
 │   ├── prompt_ziheng.txt
 │   └── prompt_ziheng_formatted.txt
 │
@@ -113,6 +103,7 @@ CampusChallenge-Group-15/
 │   │   ├── prepare_signal_return_panel.py ← Creates signal-return panel structure
 │   │   ├── clean_signal_return_panel.py  ← Cleans panel data
 │   │   ├── validate_signal_return_panel.py ← Data validation checks
+│   │   ├── portfolio_backtest.py     ← Portfolio construction and backtesting engine
 │   │   ├── factor_alpha.py           ← Factor model analysis (CAPM/FF3/FF5) with interpretations
 │   │   ├── transaction_cost_analysis.py  ← Net alpha after transaction costs (10/20/50 bps)
 │   │   ├── fama_macbeth.py           ← Cross-sectional predictability tests
@@ -126,68 +117,54 @@ CampusChallenge-Group-15/
 │       ├── plot_data_monthly.py      ← Generates monthly correlation plots (4-panel)
 │       └── aggregate_analysis.py     ← Aggregate statistics across prompt versions
 │
-├── results/                          ← Output files
-│   ├── Decision Testing Scores/      ← Raw sentiment scoring results
-│   │   ├── Decision_Testing1.csv
-│   │   ├── Decision_Testing2.csv
-│   │   └── ... (multiple versions)
-│   │
-│   ├── Merged Data/                  ← Merged datasets (scores + returns)
-│   │   ├── Merged_Data_v6.csv        ← Daily merged data
-│   │   └── Merged_Monthly_Data_v6.csv  ← Monthly aggregated data
-│   │
-│   ├── Plots/                        ← Sentiment correlation visualizations
-│   │   ├── plots_v6/                 ← Daily plots per ticker
-│   │   └── plots_monthly_v6/         ← Monthly plots per ticker
-│   │
-│   ├── Score Statistics/             ← Statistical summaries
-│   │   ├── Plot_Statistics_v6.csv    ← Daily correlation stats
-│   │   └── Plot_Statistics_Monthly_v6.csv  ← Monthly correlation stats
-│   │
-│   ├── Factor_Models/                ← Factor model analysis outputs
+├── Statistics/                       ← Statistical analysis outputs and portfolio returns
+│   ├── Factor_Models Statistics/     ← Factor model analysis outputs
 │   │   ├── alpha_full_results.csv    ← All 36 regressions (4 configs × 3 portfolios × 3 models)
 │   │   ├── alpha_summary.csv         ← Summary table with significance stars
 │   │   ├── net_alpha_after_costs.csv ← Net alpha at different cost scenarios
 │   │   └── net_alpha_summary_table.csv ← Cost analysis summary
 │   │
-│   ├── Fama_MacBeth/                 ← Cross-sectional analysis outputs
+│   ├── Fama_MacBeth Statistics/      ← Cross-sectional analysis outputs
 │   │   ├── fmb_slopes_monthly.csv    ← Monthly cross-sectional slopes (6 periods)
 │   │   ├── fmb_slopes_weekly.csv     ← Weekly cross-sectional slopes (27 periods)
 │   │   └── fmb_summary.csv           ← Summary statistics (mean slopes, t-stats, p-values)
 │   │
-│   └── Figures/                      ← Publication-quality visualizations (300 DPI PNG)
-│       ├── Figure Summaries.txt      ← Detailed chart documentation with conclusions
-│       │
-│       ├── cumulative_returns_monthly_equal.png
-│       ├── cumulative_returns_monthly_value.png
-│       ├── cumulative_returns_weekly_equal.png
-│       ├── cumulative_returns_weekly_value.png
-│       ├── cumulative_returns_comparison.png  ← Comparison of all long-short strategies
-│       │
-│       ├── drawdown_monthly_equal.png
-│       ├── drawdown_monthly_value.png
-│       ├── drawdown_weekly_equal.png
-│       ├── drawdown_weekly_value.png
-│       │
-│       ├── rolling_sharpe_monthly_equal.png
-│       ├── rolling_sharpe_monthly_value.png
-│       ├── rolling_sharpe_weekly_equal.png
-│       ├── rolling_sharpe_weekly_value.png
-│       │
-│       ├── performance_summary.png    ← Multi-panel performance dashboard
-│       │
-│       ├── alpha_comparison.png       ← Alpha across CAPM/FF3/FF5 models
-│       ├── r_squared_comparison.png   ← Model explanatory power
-│       ├── factor_exposures.png       ← Factor betas (Market/SMB/HML/RMW/CMA)
-│       ├── gross_vs_net_alpha.png     ← Transaction cost impact
-│       │
-│       ├── fama_macbeth_slopes_monthly.png     ← Monthly cross-sectional slopes time-series
-│       ├── fama_macbeth_slopes_weekly.png      ← Weekly cross-sectional slopes time-series
-│       ├── fama_macbeth_distribution_monthly.png  ← Monthly slope distribution
-│       ├── fama_macbeth_distribution_weekly.png   ← Weekly slope distribution
-│       ├── fama_macbeth_comparison.png         ← Mean slopes and t-stats comparison
-│       │
-│       └── results_dashboard.png      ← Comprehensive 6-panel results dashboard
+│   ├── Portfolio Returns/            ← Portfolio backtesting and analysis
+│   │   ├── Analysis_Notes.md         ← Portfolio analysis documentation
+│   │   ├── portfolio_comparison_all_configs.csv ← Configuration comparison results
+│   │   ├── portfolio_returns_*.csv   ← Returns by strategy (weekly/monthly, equal/value)
+│   │   └── portfolio_summary_*.csv   ← Performance summaries by strategy
+│   │
+│   └── Prompt Testing Phase/         ← Prompt evaluation results
+│       ├── Decision Testing Scores (Prompt Testing)/  ← Raw sentiment scoring results
+│       ├── Merged Data (Test Data - Prompt Evaluation)/  ← Merged test datasets
+│       └── Score Statistics Used For Prompt Evaluation/  ← Statistical summaries for prompt comparison
+│
+├── Figures and Tables/               ← Visualizations and plots
+│   ├── Figures/                      ← Publication-quality visualizations (300 DPI PNG)
+│   │   ├── Figure Summaries (Explained).pdf  ← Detailed chart documentation with conclusions
+│   │   ├── cumulative_returns_*.png  ← Cumulative return charts (4 configs + comparison)
+│   │   ├── drawdown_*.png            ← Drawdown analysis charts (4 configs)
+│   │   ├── rolling_sharpe_*.png      ← Rolling Sharpe ratio charts (4 configs)
+│   │   ├── performance_summary.png   ← Multi-panel performance dashboard
+│   │   ├── alpha_comparison.png      ← Alpha across CAPM/FF3/FF5 models
+│   │   ├── r_squared_comparison.png  ← Model explanatory power
+│   │   ├── factor_exposures.png      ← Factor betas (Market/SMB/HML/RMW/CMA)
+│   │   ├── gross_vs_net_alpha.png    ← Transaction cost impact
+│   │   ├── fama_macbeth_*.png        ← Fama-MacBeth analysis charts (5 total)
+│   │   ├── results_dashboard.png     ← Comprehensive 6-panel results dashboard
+│   │   ├── Panel_validation.png      ← Panel data validation visualization
+│   │   ├── Used Figures In Report/   ← Figures selected for final report
+│   │   └── Unused Figures/           ← Alternative visualizations not used
+│   │
+│   └── Plots Used For Prompt Evaluation/  ← Prompt comparison visualizations
+│       ├── plots_v6/                 ← Daily plots per ticker (v6)
+│       ├── plots_monthly_v6/         ← Monthly plots per ticker (v6)
+│       ├── plots_v5_without_Regime/  ← Plots for v5 without regime detection
+│       ├── plots_v6_FullData_adjusted/  ← Full dataset plots with time adjustment
+│       ├── plots_v6_FullData_non-adjusted/  ← Full dataset plots without adjustment
+│       ├── plots_Ziheng/             ← Ziheng prompt version plots
+│       └── Aggregate Analysis/       ← Aggregate statistics across prompt versions
 │
 └── venv/                             ← Virtual environment (not tracked in git)
 ```
@@ -231,6 +208,28 @@ CampusChallenge-Group-15/
 - Input: daily_return_data_datefiltered.csv + Final Extracted File.csv
 - Output: daily_return_data_cleaned.csv (sorted and filtered)
 
+#### **portfolio_backtest.py** (src/Modeling and Analysis/)
+- Core portfolio construction and backtesting engine for sentiment-based trading strategies
+- **Strategy Configurations**: Tests 4 different strategy setups:
+  - **Monthly Equal-Weighted**: Monthly rebalancing with equal position sizes
+  - **Monthly Value-Weighted**: Monthly rebalancing with market-cap weighted positions
+  - **Weekly Equal-Weighted**: Weekly rebalancing with equal position sizes
+  - **Weekly Value-Weighted**: Weekly rebalancing with market-cap weighted positions
+- **Portfolio Construction**:
+  - Long portfolio: Top quintile (20% highest sentiment scores)
+  - Short portfolio: Bottom quintile (20% lowest sentiment scores)
+  - Long-Short: Combined long and short positions
+- **Performance Metrics**: Calculates returns, volatility, Sharpe ratio, max drawdown for each strategy
+- **Key Features**:
+  - Handles missing data and edge cases robustly
+  - Accounts for realistic rebalancing constraints
+  - Generates detailed performance summaries and comparison tables
+- **Output Files** (saved to `Statistics/Portfolio Returns/`):
+  - `portfolio_returns_[frequency]_[weighting].csv`: Daily return series for Long/Short/Long-Short
+  - `portfolio_summary_[frequency]_[weighting].csv`: Performance statistics summary
+  - `portfolio_comparison_all_configs.csv`: Side-by-side comparison of all 4 configurations
+- **Usage**: Run after data cleaning to generate portfolio returns needed for factor model analysis
+
 ### Factor Model Analysis & Statistical Validation
 
 #### **factor_alpha.py** (src/Modeling and Analysis/)
@@ -250,8 +249,8 @@ CampusChallenge-Group-15/
     - 💡 Strategy insights (rebalancing frequency, weighting effects)
     - 🎯 Overall assessment with star ratings
 - **Output Files**:
-  - `results/Factor_Models/alpha_full_results.csv`: Detailed regression results (all 36 regressions)
-  - `results/Factor_Models/alpha_summary.csv`: Summary table with significance stars (*** p<0.01, ** p<0.05, * p<0.10)
+  - `Statistics/Factor_Models Statistics/alpha_full_results.csv`: Detailed regression results (all 36 regressions)
+  - `Statistics/Factor_Models Statistics/alpha_summary.csv`: Summary table with significance stars (*** p<0.01, ** p<0.05, * p<0.10)
 - **Key Results**: Weekly value-weighted long-short shows +35.48% alpha (FF5), driven primarily by short leg (-38.70% alpha)
 
 #### **transaction_cost_analysis.py** (src/Modeling and Analysis/)
@@ -262,8 +261,8 @@ CampusChallenge-Group-15/
   - High (50 bps): Retail investors or low liquidity
 - **Calculation**: Annual cost = Turnover × Cost per trade × Rebalancing frequency
 - **Output Files**:
-  - `results/Factor_Models/net_alpha_after_costs.csv`: Net alpha under all cost scenarios
-  - `results/Factor_Models/net_alpha_summary_table.csv`: Summary comparison table
+  - `Statistics/Factor_Models Statistics/net_alpha_after_costs.csv`: Net alpha under all cost scenarios
+  - `Statistics/Factor_Models Statistics/net_alpha_summary_table.csv`: Summary comparison table
 - **Key Results**: Weekly value-weighted survives with +27.27% net alpha after 20 bps costs (gross alpha +35.48%, costs -8.21%)
 
 #### **fama_macbeth.py** (src/Modeling and Analysis/)
@@ -277,9 +276,9 @@ CampusChallenge-Group-15/
   - Statistical significance (t>1.96) → systematic predictive power
   - Economic magnitude → 1-unit signal increase implies b% return change
 - **Output Files**:
-  - `results/Fama_MacBeth/fmb_slopes_monthly.csv`: 6 monthly cross-sectional slopes
-  - `results/Fama_MacBeth/fmb_slopes_weekly.csv`: 27 weekly cross-sectional slopes
-  - `results/Fama_MacBeth/fmb_summary.csv`: Mean slopes, t-statistics, p-values, significance
+  - `Statistics/Fama_MacBeth Statistics/fmb_slopes_monthly.csv`: 6 monthly cross-sectional slopes
+  - `Statistics/Fama_MacBeth Statistics/fmb_slopes_weekly.csv`: 27 weekly cross-sectional slopes
+  - `Statistics/Fama_MacBeth Statistics/fmb_summary.csv`: Mean slopes, t-statistics, p-values, significance
 - **Key Results**: Highly significant predictive power (Monthly: t=3.50***, p=0.005; Weekly: t=2.87***, p=0.008)
 
 #### **create_visualizations.py** (src/Modeling and Analysis/)
@@ -301,7 +300,7 @@ CampusChallenge-Group-15/
   - Comparison of mean slopes and significance across frequencies
 - **Dashboard** (1 chart):
   - Comprehensive 6-panel results dashboard integrating all key findings
-- **Output**: All 24 charts saved to `results/Figures/` with detailed documentation in `Figure Summaries.txt`
+- **Output**: All 24 charts saved to `Figures and Tables/Figures/` with detailed documentation in `Figure Summaries (Explained).pdf`
 - **Styling**: Professional color schemes (green/red/blue for long/short/long-short, orange/purple/teal for CAPM/FF3/FF5)
 
 ### Sentiment Analysis Pipeline
@@ -324,7 +323,8 @@ CampusChallenge-Group-15/
   - **Simple format**: Extracts "Line 1:" score directly
   - **Fallback parsing**: Handles responses missing labels by detecting standalone numbers + text
 - Returns tuple of (score, reason) for each headline
-- Critical for handling different prompt versions (v4/v5 vs v6/ziheng_formatted)
+- Critical for handling different prompt versions (v4/v5/v6/v7/v8 and ziheng variants)
+- Designed to be robust across prompt evolution without code changes
 
 #### **run_analysis.py**
 - Main entry point for sentiment analysis pipeline
@@ -334,6 +334,22 @@ CampusChallenge-Group-15/
 - Outputs CSV with: ID_Number, Ticker, Date, Headline, Score, Reason
 - Usage: Configure prompt file path and input/output CSV paths at bottom of script
 
+### Prompt Engineering Evolution
+
+The project includes multiple prompt versions (v1-v8), each iterating on the approach to sentiment analysis:
+
+- **prompt_v1.txt - v3.txt**: Initial experiments with different prompting strategies
+- **prompt_v4.txt**: Major breakthrough - introduced persona-based scoring (NOVICE, FANATIC, DAY/SWING, LONG-TERM) with MEME/NORMAL regime detection
+- **prompt_v5.txt**: Refined v4 with balanced examples and improved instructions
+  - **prompt_v5(only_score_reason).txt**: Streamlined output format removing intermediate reasoning steps
+  - **prompt_v5(without_Regime).txt**: Equal-weighted version without regime detection for comparison
+- **prompt_v6.txt**: Added support for article tags/context to improve sentiment accuracy
+- **prompt_v7.txt**: Further refinements to scoring criteria and example quality
+- **prompt_v8 (FINAL).txt**: Final optimized version incorporating all learnings - recommended for production use
+- **prompt_ziheng.txt / prompt_ziheng_formatted.txt**: Alternative approach by team member with different scoring methodology
+
+**Recommendation**: Use `prompt_v8 (FINAL).txt` for new analyses as it represents the most refined and tested version.
+
 ### Data Processing
 
 #### **merge_data.py** (src/Prompt Comparison/)
@@ -342,7 +358,7 @@ CampusChallenge-Group-15/
   - Rationale: Returns are measured after the headline, not same-day
   - Uses `timedelta(days=1)` for date adjustment
 - Performs inner join on Ticker and adjusted Date
-- Input: Decision_Testing files + Daily_Return_Matching_PTD_1.csv
+- Input: Decision_Testing files + data/data (sample and setup)/Daily_Return_Matching_PTD_1.csv
 - Output: Merged_Data_v6.csv with both Score and RET columns
 
 #### **average_monthly_scores.py** (src/Prompt Comparison/)
@@ -372,7 +388,7 @@ CampusChallenge-Group-15/
   3. **Scatter Plot**: Score vs RET with Pearson correlation coefficient and trend line
   4. **Rolling 5-Day Correlation**: Time-series showing how correlation evolves
 - Exports statistical summary CSV with correlations, means, std devs per ticker
-- Saves plots to `results/Plots/plots_v6/` directory
+- Saves plots to `Figures and Tables/Plots Used For Prompt Evaluation/plots_v6/` directory
 - Usage: Configure input CSV path and version number in script
 
 #### **plot_data_monthly.py** (src/Prompt Comparison/)
@@ -382,7 +398,7 @@ CampusChallenge-Group-15/
   - YYYY-MM date formatting on x-axis
   - Larger scatter plot markers (fewer data points)
 - Exports Monthly_Plot_Statistics_v6.csv with monthly correlations
-- Saves plots to `results/Plots/plots_monthly_v6/` directory
+- Saves plots to `Figures and Tables/Plots Used For Prompt Evaluation/plots_monthly_v6/` directory
 - Handles lower data density typical of monthly aggregations
 
 ## Process Workflows
@@ -391,10 +407,10 @@ CampusChallenge-Group-15/
 
 1. **Prepare Portfolio Returns**
    - Ensure portfolio return files are in place:
-     - `Portfolio/portfolio_returns_monthly_equal.csv`
-     - `Portfolio/portfolio_returns_monthly_value.csv`
-     - `Portfolio/portfolio_returns_weekly_equal.csv`
-     - `Portfolio/portfolio_returns_weekly_value.csv`
+     - `Statistics/Portfolio Returns/portfolio_returns_monthly_equal.csv`
+     - `Statistics/Portfolio Returns/portfolio_returns_monthly_value.csv`
+     - `Statistics/Portfolio Returns/portfolio_returns_weekly_equal.csv`
+     - `Statistics/Portfolio Returns/portfolio_returns_weekly_value.csv`
    - Each file should contain daily returns with columns: date, Long, Short, Long_Short
 
 2. **Prepare Fama-French Factor Data**
@@ -416,8 +432,8 @@ CampusChallenge-Group-15/
      - Provides comprehensive interpretations (8 sections per strategy)
    - **Outputs**:
      - Console: Detailed interpretations with Unicode formatting (α, β, R², ★ ratings)
-     - `results/Factor_Models/alpha_full_results.csv`: All regression coefficients, t-stats, p-values
-     - `results/Factor_Models/alpha_summary.csv`: Clean summary table with significance stars
+     - `Statistics/Factor_Models Statistics/alpha_full_results.csv`: All regression coefficients, t-stats, p-values
+     - `Statistics/Factor_Models Statistics/alpha_summary.csv`: Clean summary table with significance stars
    - **Key Metrics**: Alpha, t-statistics, p-values, R², factor betas (Market/SMB/HML/RMW/CMA)
 
 4. **Run Transaction Cost Analysis**
@@ -431,8 +447,8 @@ CampusChallenge-Group-15/
      - Computes net alpha = gross alpha - costs
    - **Outputs**:
      - Console: Net alpha tables for each cost scenario
-     - `results/Factor_Models/net_alpha_after_costs.csv`: Net alpha under all scenarios
-     - `results/Factor_Models/net_alpha_summary_table.csv`: Summary comparison
+     - `Statistics/Factor_Models Statistics/net_alpha_after_costs.csv`: Net alpha under all scenarios
+     - `Statistics/Factor_Models Statistics/net_alpha_summary_table.csv`: Summary comparison
    - **Key Finding**: Weekly value-weighted survives with +27.27% net alpha (20 bps costs)
 
 5. **Run Fama-MacBeth Cross-Sectional Analysis**
@@ -447,9 +463,9 @@ CampusChallenge-Group-15/
    - **Input**: `data/signal_return_panel_cleaned(2).csv`
    - **Outputs**:
      - Console: Summary statistics with t-stats and significance
-     - `results/Fama_MacBeth/fmb_slopes_monthly.csv`: 6 monthly slopes
-     - `results/Fama_MacBeth/fmb_slopes_weekly.csv`: 27 weekly slopes
-     - `results/Fama_MacBeth/fmb_summary.csv`: Mean slopes, t-stats, p-values
+     - `Statistics/Fama_MacBeth Statistics/fmb_slopes_monthly.csv`: 6 monthly slopes
+     - `Statistics/Fama_MacBeth Statistics/fmb_slopes_weekly.csv`: 27 weekly slopes
+     - `Statistics/Fama_MacBeth Statistics/fmb_summary.csv`: Mean slopes, t-stats, p-values
    - **Key Results**: Monthly t=3.50***, Weekly t=2.87*** (both highly significant)
 
 6. **Generate Comprehensive Visualizations**
@@ -468,11 +484,11 @@ CampusChallenge-Group-15/
      - Factor models: alpha comparison, R², factor exposures, gross vs net alpha
      - Fama-MacBeth: slope time-series, distributions, comparisons
      - Dashboard: 6-panel comprehensive overview
-   - **Outputs**: All 24 charts saved to `results/Figures/`
+   - **Outputs**: All 24 charts saved to `Figures and Tables/Figures/`
    - **Note**: Windows PowerShell requires UTF-8 encoding for proper Unicode display
 
 7. **Review Documentation**
-   - **Chart Documentation**: `results/Figures/Figure Summaries.txt`
+   - **Chart Documentation**: `Figures and Tables/Figures/Figure Summaries (Explained).pdf`
      - Detailed descriptions of all 24 charts
      - Metric definitions and interpretations
      - 2-3 sentence conclusions per chart
@@ -536,7 +552,8 @@ CampusChallenge-Group-15/
    ```
    - Input: CSV with headlines (ID_Number, Ticker, Date, Headline, [tags])
    - Process: Sends each headline to Groq API using selected prompt template
-   - Output: `results/Decision Testing Scores/Decision_Testing*.csv` (adds Score, Reason columns)
+   - **Note**: Configure prompt path in script - use `prompts/prompt_v8 (FINAL).txt` for production analyses
+   - Output: `Statistics/Prompt Testing Phase/Decision Testing Scores (Prompt Testing)/Decision_Testing*.csv` (adds Score, Reason columns)
 
 2. **Data Preparation**
    - Extract appropriate date range from `train_df.csv` or equivalent dataset
@@ -547,10 +564,10 @@ CampusChallenge-Group-15/
    ```
    python src/Prompt\ Comparison/merge_data.py
    ```
-   - Input: Decision_Testing*.csv + Daily_Return_Matching_PTD_1.csv
+   - Input: Decision_Testing*.csv + data/data (sample and setup)/Daily_Return_Matching_PTD_1.csv
    - Process: **Adds +1 day** to sentiment dates, then joins on Ticker and adjusted Date
    - Rationale: Stock returns are measured the day AFTER the headline publication
-   - Output: `results/Merged Data/Merged_Data_v6.csv` (Score + RET columns aligned)
+   - Output: `Statistics/Prompt Testing Phase/Merged Data (Test Data - Prompt Evaluation)/Merged_Data_v6.csv` (Score + RET columns aligned)
 
 4. **Generate Visualizations**
    ```
@@ -559,8 +576,8 @@ CampusChallenge-Group-15/
    - Input: Merged_Data_v6.csv
    - Process: Creates 4-panel plots per ticker (raw, normalized, scatter, rolling correlation)
    - Output: 
-     - Plots: `results/Plots/plots_v6/[TICKER]_v6.png`
-     - Stats: `results/Score Statistics/Plot_Statistics_v6.csv`
+     - Plots: `Figures and Tables/Plots Used For Prompt Evaluation/plots_v6/[TICKER]_v6.png`
+     - Stats: `Statistics/Prompt Testing Phase/Score Statistics Used For Prompt Evaluation/Plot_Statistics_v6.csv`
 
 5. **Manual Analysis** (if needed)
    - Open `Plot_Statistics_v6.csv` in Excel or pandas
@@ -580,9 +597,9 @@ CampusChallenge-Group-15/
    ```
    python src/Prompt\ Comparison/average_monthly_scores.py
    ```
-   - Input: `results/Merged Data/Merged_Data_v6.csv` (or direct from Decision_Testing if merging not yet done)
+   - Input: `Statistics/Prompt Testing Phase/Merged Data (Test Data - Prompt Evaluation)/Merged_Data_v6.csv` (or direct from Decision_Testing if merging not yet done)
    - Process: Groups by Ticker and YearMonth, calculates mean Score and RET
-   - Output: `results/Merged Data/Monthly_Averaged_Score_v6.csv` (dates in YYYY-MM format)
+   - Output: `Statistics/Prompt Testing Phase/Merged Data (Test Data - Prompt Evaluation)/Monthly_Averaged_Score_v6.csv` (dates in YYYY-MM format)
 
 3. **Data Preparation**
    - Extract monthly return data from `train_return_data.csv` or equivalent
@@ -593,10 +610,10 @@ CampusChallenge-Group-15/
    ```
    python src/Prompt\ Comparison/merge_data_monthly.py
    ```
-   - Input: Monthly_Averaged_Score_v6.csv + Monthly_Return_Data_sample.csv
+   - Input: Monthly_Averaged_Score_v6.csv + data/data (sample and setup)/Monthly_Return_Data_sample.csv
    - Process: **Adds +1 month** to sentiment dates, then joins on Ticker and adjusted Date
    - Rationale: Monthly returns are measured the month AFTER the sentiment aggregation period
-   - Output: `results/Merged Data/Merged_Monthly_Data_v6.csv` (Score + RET aligned with time offset)
+   - Output: `Statistics/Prompt Testing Phase/Merged Data (Test Data - Prompt Evaluation)/Merged_Monthly_Data_v6.csv` (Score + RET aligned with time offset)
 
 5. **Generate Monthly Visualizations**
    ```
@@ -605,8 +622,8 @@ CampusChallenge-Group-15/
    - Input: Merged_Monthly_Data_v6.csv
    - Process: Creates 4-panel plots per ticker with 3-month rolling correlation window
    - Output:
-     - Plots: `results/Plots/plots_monthly_v6/[TICKER]_monthly_v6.png`
-     - Stats: `results/Score Statistics/Plot_Statistics_Monthly_v6.csv`
+     - Plots: `Figures and Tables/Plots Used For Prompt Evaluation/plots_monthly_v6/[TICKER]_monthly_v6.png`
+     - Stats: `Statistics/Prompt Testing Phase/Score Statistics Used For Prompt Evaluation/Plot_Statistics_Monthly_v6.csv`
 
 6. **Manual Analysis** (if needed)
    - Open `Plot_Statistics_Monthly_v6.csv`
@@ -624,7 +641,7 @@ CampusChallenge-Group-15/
 
 ## Output Files Summary
 
-### Factor Model Outputs (`results/Factor_Models/`)
+### Factor Model Outputs (`Statistics/Factor_Models Statistics/`)
 
 **alpha_full_results.csv**
 - Complete regression results for all 36 models (4 configs × 3 portfolios × 3 factor models)
@@ -646,7 +663,7 @@ CampusChallenge-Group-15/
 - Includes: gross alpha, annual costs, net alpha, viable (Yes/No) flag
 - Use for: Quick assessment of implementable strategies
 
-### Fama-MacBeth Outputs (`results/Fama_MacBeth/`)
+### Fama-MacBeth Outputs (`Statistics/Fama_MacBeth Statistics/`)
 
 **fmb_slopes_monthly.csv**
 - 6 monthly cross-sectional regression slopes (one per rebalancing period)
@@ -664,7 +681,7 @@ CampusChallenge-Group-15/
 - Columns: frequency, mean_slope, t_statistic, p_value, n_periods, significance
 - Use for: Overall assessment of cross-sectional predictability
 
-### Visualization Outputs (`results/Figures/`)
+### Visualization Outputs (`Figures and Tables/Figures/`)
 
 **24 PNG Charts (300 DPI):**
 
@@ -689,7 +706,7 @@ CampusChallenge-Group-15/
 *Dashboard (1 chart):*
 - `results_dashboard.png` - 6-panel comprehensive overview
 
-**Figure Summaries.txt**
+**Figure Summaries (Explained).pdf**
 - Detailed documentation for all 24 charts
 - Each chart includes: filename, metric definition, 2-3 sentence conclusion
 - Use for: Understanding chart interpretations and writing captions
@@ -706,7 +723,7 @@ If you want to jump directly to the statistical validation and visualization:
    pip install matplotlib seaborn statsmodels
    ```
 
-2. **Run factor model analysis** (requires portfolio returns in `Portfolio/` and Fama-French data in `data/Fama_French/`):
+2. **Run factor model analysis** (requires portfolio returns in `Statistics/Portfolio Returns/` and Fama-French data in `data/Fama_French/`):
    ```bash
    python CampusChallenge-Group-15/src/Modeling\ and\ Analysis/factor_alpha.py
    python CampusChallenge-Group-15/src/Modeling\ and\ Analysis/transaction_cost_analysis.py
@@ -721,8 +738,8 @@ If you want to jump directly to the statistical validation and visualization:
    ```
 
 4. **Review outputs**:
-   - Statistical results: `results/Factor_Models/` and `results/Fama_MacBeth/`
-   - Charts: `results/Figures/` (24 PNG files)
+   - Statistical results: `Statistics/Factor_Models Statistics/` and `Statistics/Fama_MacBeth Statistics/`
+   - Charts: `Figures and Tables/Figures/` (24 PNG files)
    - Documentation: `Documentations/Final Summaries/Executive_Summary.md` and `Presentation_Slides.md`
 
 ### Full Pipeline (From Raw Data)
@@ -748,26 +765,26 @@ If you want to jump directly to the statistical validation and visualization:
    - **Factor models & validation**: Follow "Statistical Validation and Analysis Workflow" steps (NEW)
 
 5. **Review outputs**:
-   - Sentiment correlation statistics: `results/Score Statistics/`
-   - Sentiment correlation plots: `results/Plots/`
-   - Portfolio backtesting: `Portfolio/`
-   - Factor model analysis: `results/Factor_Models/` (NEW)
-   - Cross-sectional validation: `results/Fama_MacBeth/` (NEW)
-   - Publication-quality charts: `results/Figures/` (NEW - 24 charts)
-   - Comprehensive report: `Executive_Summary.md` (NEW)
-   - Presentation deck: `Presentation_Slides.md` (NEW)
+   - Sentiment correlation statistics: `Statistics/Prompt Testing Phase/Score Statistics Used For Prompt Evaluation/`
+   - Sentiment correlation plots: `Figures and Tables/Plots Used For Prompt Evaluation/`
+   - Portfolio backtesting: `Statistics/Portfolio Returns/`
+   - Factor model analysis: `Statistics/Factor_Models Statistics/` (NEW)
+   - Cross-sectional validation: `Statistics/Fama_MacBeth Statistics/` (NEW)
+   - Publication-quality charts: `Figures and Tables/Figures/` (NEW - 24 charts)
+   - Comprehensive report: `Documentations/Final Summaries/Executive_Summary.md` (NEW)
+   - Presentation deck: `Documentations/Final Summaries/Presentation_Slides.md` (NEW)
 
 ## Documentation
 
 - **[Documentations/Final Summaries/Executive_Summary.md](Documentations/Final Summaries/Executive_Summary.md)**: Comprehensive 50+ page analysis report covering methodology, results, discussion, and conclusions with all statistical findings
 - **[Documentations/Final Summaries/Presentation_Slides.md](Documentations/Final Summaries/Presentation_Slides.md)**: 15-slide presentation deck with speaker notes, chart references, and timing guidelines for 10-15 minute presentation
-- **[results/Figures/Figure Summaries.txt](results/Figures/Figure Summaries.txt)**: Detailed documentation of all 24 visualizations with metric definitions and data-driven conclusions
+- **[Figures and Tables/Figures/Figure Summaries (Explained).pdf](Figures and Tables/Figures/Figure Summaries (Explained).pdf)**: Detailed documentation of all 24 visualizations with metric definitions and data-driven conclusions
 - **[Documentations/Data_Cleaning_Methodology.md](Documentations/Data_Cleaning_Methodology.md)**: Comprehensive documentation of data cleaning process, extraction methods, validation steps, and quality assurance procedures
 - **[Documentations/walkthrough.md](Documentations/walkthrough.md)**: Step-by-step project walkthrough
 - **[Documentations/Analysis Planning (Now-Redundant).md](Documentations/Analysis Planning (Now-Redundant).md)**: Project planning and approach
 - **[Documentations/Criticisms.md](Documentations/Criticisms.md)**: Critical analysis and limitations
 - **[Documentations/Used_Statistics(Prompt Engineering).md](Documentations/Used_Statistics(Prompt Engineering).md)**: Statistical methods documentation
-- **[Portfolio/Analysis_Notes.md](Portfolio/Analysis_Notes.md)**: Portfolio construction and backtesting notes
+- **[Statistics/Portfolio Returns/Analysis_Notes.md](Statistics/Portfolio Returns/Analysis_Notes.md)**: Portfolio construction and backtesting notes
 
 ## Important Notes
 

@@ -11,10 +11,14 @@ This addresses data quality issues identified by validate_signal_return_panel.py
 
 import pandas as pd
 import numpy as np
+import os
 
-# File paths
-INPUT_FILE = "CampusChallenge-Group-15\data\signal_return_panel_cleaned.csv"
-OUTPUT_FILE = "CampusChallenge-Group-15\data\signal_return_panel_cleaned(2).csv"
+# File paths (relative to project root)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.join(script_dir, '..', '..')  # Go up to project root
+
+INPUT_FILE = os.path.join(project_root, 'data', 'signal_return_panel_cleaned.csv')
+OUTPUT_FILE = os.path.join(project_root, 'data', 'signal_return_panel_cleaned(2).csv')
 
 # Cleaning parameters
 MIN_OBSERVATIONS_PER_TICKER = 5  # Drop tickers with fewer observations

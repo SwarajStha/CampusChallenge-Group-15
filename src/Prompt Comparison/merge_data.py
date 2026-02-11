@@ -1,10 +1,15 @@
 import pandas as pd
 from datetime import timedelta
+import os
+
+# Get project root (go up two levels from src/Prompt Comparison/)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.join(script_dir, '..', '..')  # Go up to project root
 
 # File paths - change these variables to use different files
-DECISION_FILE = "CampusChallenge-Group-15/results/Decision Testing Scores/Decision_Testing_Full1.csv"
-RETURNS_FILE = "CampusChallenge-Group-15/sample-data/Full_TestData_DailyReturns.csv"
-OUTPUT_FILE = "CampusChallenge-Group-15/results/Merged Data/Merged_Data_v6(Full-Test_Data)_non-adjusted.csv"
+DECISION_FILE = os.path.join(project_root, 'Statistics', 'Prompt Testing Phase', 'Decision Testing Scores (Prompt Testing)', 'Decision_Testing_Full1.csv')
+RETURNS_FILE = os.path.join(project_root, 'data', 'data (sample and setup)', 'Full_TestData_DailyReturns.csv')
+OUTPUT_FILE = os.path.join(project_root, 'Statistics', 'Prompt Testing Phase', 'Merged Data (Test Data - Prompt Evaluation)', 'Merged_Data_v6(Full-Test_Data)_non-adjusted.csv')
 
 def merge_datasets(decision_file, returns_file, output_file):
     """

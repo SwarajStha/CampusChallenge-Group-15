@@ -20,9 +20,12 @@ import numpy as np
 import os
 from datetime import datetime
 
-# File paths
-PANEL_FILE = "CampusChallenge-Group-15\data\signal_return_panel_cleaned(2).csv"
-OUTPUT_DIR = "CampusChallenge-Group-15\Portfolio"
+# File paths (relative to project root)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.join(script_dir, '..', '..')  # Go up to project root
+
+PANEL_FILE = os.path.join(project_root, 'data', 'signal_return_panel_cleaned(2).csv')
+OUTPUT_DIR = os.path.join(project_root, 'Statistics', 'Portfolio Returns')
 
 # Portfolio configuration
 LONG_PERCENTILE = 80  # Top 20% for long

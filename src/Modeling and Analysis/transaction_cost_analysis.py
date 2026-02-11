@@ -20,10 +20,13 @@ import pandas as pd
 import numpy as np
 import os
 
-# File paths
-ALPHA_RESULTS = "../results/Factor_Models/alpha_full_results.csv"
-PORTFOLIO_DIR = "../Portfolio"
-OUTPUT_DIR = "../results/Factor_Models"
+# File paths (relative to project root)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.join(script_dir, '..', '..')  # Go up to project root
+
+ALPHA_RESULTS = os.path.join(project_root, 'Statistics', 'Factor_Models Statistics', 'alpha_full_results.csv')
+PORTFOLIO_DIR = os.path.join(project_root, 'Statistics', 'Portfolio Returns')
+OUTPUT_DIR = os.path.join(project_root, 'Statistics', 'Factor_Models Statistics')
 
 # Transaction cost assumptions (in bps = basis points = 0.01%)
 TRANSACTION_COST_SCENARIOS = {

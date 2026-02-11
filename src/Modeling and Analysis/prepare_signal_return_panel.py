@@ -22,11 +22,15 @@ Output columns:
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
+import os
 
-# File paths
-SENTIMENT_FILE = "CampusChallenge-Group-15\data\Full Extracted File (sorted).csv"
-RETURNS_FILE = "CampusChallenge-Group-15\data\daily_return_data_cleaned.csv"
-OUTPUT_FILE = "CampusChallenge-Group-15\data\signal_return_panel.csv"
+# File paths (relative to project root)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.join(script_dir, '..', '..')  # Go up to project root
+
+SENTIMENT_FILE = os.path.join(project_root, 'data', 'Full Extracted File (sorted).csv')
+RETURNS_FILE = os.path.join(project_root, 'data', 'daily_return_data_cleaned.csv')
+OUTPUT_FILE = os.path.join(project_root, 'data', 'signal_return_panel.csv')
 
 # Configuration
 MAX_GAP_DAYS = 5  # Maximum calendar days between sentiment and return

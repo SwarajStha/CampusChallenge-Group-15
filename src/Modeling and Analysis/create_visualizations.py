@@ -21,11 +21,14 @@ import os
 plt.style.use('seaborn-v0_8-darkgrid')
 sns.set_palette("husl")
 
-# File paths
-PORTFOLIO_DIR = "../Portfolio"
-FACTOR_DIR = "../results/Factor_Models"
-FAMA_MACBETH_DIR = "../results/Fama_MacBeth"
-OUTPUT_DIR = "../results/Figures"
+# File paths (relative to project root)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.join(script_dir, '..', '..')  # Go up to project root
+
+PORTFOLIO_DIR = os.path.join(project_root, 'Statistics', 'Portfolio Returns')
+FACTOR_DIR = os.path.join(project_root, 'Statistics', 'Factor_Models Statistics')
+FAMA_MACBETH_DIR = os.path.join(project_root, 'Statistics', 'Fama_MacBeth Statistics')
+OUTPUT_DIR = os.path.join(project_root, 'Figures and Tables', 'Figures')
 
 # Portfolio configurations
 CONFIGS = ['monthly_equal', 'monthly_value', 'weekly_equal', 'weekly_value']

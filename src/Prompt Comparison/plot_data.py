@@ -4,11 +4,16 @@ import matplotlib.dates as mdates
 from datetime import datetime
 import numpy as np
 from scipy import stats
+import os
+
+# Get project root (go up two levels from src/Prompt Comparison/)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.join(script_dir, '..', '..')  # Go up to project root
 
 # File paths - change these variables to use different files
-MERGED_DATA_FILE = "CampusChallenge-Group-15/results/Merged Data/Merged_Data_v6(Full-Test_Data)_non-adjusted.csv"
-OUTPUT_DIR = "CampusChallenge-Group-15/results/Plots/plots_v6_FullData_non-adjusted"
-STATS_OUTPUT_FILE = "CampusChallenge-Group-15/results/Score Statistics/Plot_Statistics_v6_FullData_non-adjusted.csv"
+MERGED_DATA_FILE = os.path.join(project_root, 'Statistics', 'Prompt Testing Phase', 'Merged Data (Test Data - Prompt Evaluation)', 'Merged_Data_v6(Full-Test_Data)_non-adjusted.csv')
+OUTPUT_DIR = os.path.join(project_root, 'Figures and Tables', 'Plots Used For Prompt Evaluation', 'plots_v6_FullData_non-adjusted')
+STATS_OUTPUT_FILE = os.path.join(project_root, 'Statistics', 'Prompt Testing Phase', 'Score Statistics Used For Prompt Evaluation', 'Plot_Statistics_v6_FullData_non-adjusted.csv')
 
 def plot_ticker_data(merged_file, output_dir, stats_output_file):
     """

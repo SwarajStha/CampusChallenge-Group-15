@@ -93,30 +93,30 @@ Traditional strategies rely on:
 
 # Slide 4: Portfolio Performance - The Winner
 
-## Weekly Value-Weighted Long-Short: +119% Return
+## Weekly Value-Weighted Long-Short: +14.95% Return (32.73% Annualized)
 
 **Chart:** `cumulative_returns_weekly_value.png`
 
 ### Key Metrics (6 Months)
 | Metric | Value |
 |--------|-------|
-| **Total Return** | +119% |
-| **Sharpe Ratio** | 0.45 |
-| **Max Drawdown** | -35% |
-| **Volatility (Ann.)** | 127% |
+| **Total Return** | +14.95% |
+| **Sharpe Ratio** | 1.29 |
+| **Max Drawdown** | -6.2% |
+| **Volatility (Ann.)** | 24.1% |
 
 ### Interpretation
-✅ Exceptional performance driven by **short leg** (-67% return = profit)  
-✅ Positive risk-adjusted returns (Sharpe > 0)  
-⚠️ High volatility requires risk tolerance
+✅ Strong performance driven by **short leg** (-67% return = profit)  
+✅ Positive risk-adjusted returns (Sharpe 1.29)  
+⚠️ Moderate volatility (24.1% annualized)
 
 ---
 
 **Speaker Notes:**
-- Show cumulative returns chart - dramatic outperformance
+- Show cumulative returns chart - strong outperformance
 - Short leg (red line) shows steep negative returns → profitable shorts
 - Long leg (green) shows positive but more modest returns
-- Long-short (blue) combines both for +119% total
+- Long-short (blue) combines both for +14.95% total (32.73% annualized)
 - This isn't theoretical - it's based on daily returns with realistic portfolio construction
 - High volatility (127%) is typical for leveraged long-short strategies
 
@@ -134,7 +134,7 @@ Traditional strategies rely on:
 
 | Config | Return | Why It Works / Fails |
 |--------|--------|---------------------|
-| **Weekly Value** | **+119%** | ✅ Fast adaptation + Large-cap focus |
+| **Weekly Value** | **+14.95%** | ✅ Fast adaptation + Large-cap focus |
 | Monthly Value | +21% | ⚠️ Slower rebalancing misses opportunities |
 | Weekly Equal | -18% | ❌ Overweights small illiquid stocks |
 | Monthly Equal | -31% | ❌ Worst of both: slow + poor weighting |
@@ -347,10 +347,10 @@ Traditional strategies rely on:
 | **Transaction Costs** | Economic viability? | +27% net alpha | ✅ Implementable |
 
 ### Comprehensive Evidence
-✅ **Performance**: +119% return over 6 months  
+✅ **Performance**: +14.95% return over 6 months (32.73% annualized)  
 ✅ **Statistical**: t>2.8 cross-sectional significance  
 ✅ **Economic**: Survives 20 bps costs with +27% net alpha  
-✅ **Factor Independence**: Low R² (28%), zero betas
+✅ **Factor Independence**: Low R² (28%), negative market beta (-0.82)
 
 ---
 
@@ -438,10 +438,10 @@ Traditional strategies rely on:
 ## Sentiment-Based Trading: Validated ✅
 
 ### Main Findings
-✅ **+119% return** over 6 months (weekly value-weighted long-short)  
+✅ **+14.95% return** over 6 months (32.73% annualized, weekly value-weighted long-short)  
 ✅ **+35% gross alpha**, +27% net alpha after costs (FF5 model)  
 ✅ **t>2.8*** cross-sectional significance (Fama-MacBeth)  
-✅ **Factor-independent** (low R², near-zero betas)  
+✅ **Factor-independent** (low R² 28%, negative market beta -0.82)  
 ✅ **Economically viable** after realistic transaction costs
 
 ### Strategic Insights
@@ -557,11 +557,11 @@ Traditional strategies rely on:
 # APPENDIX: Key Statistics Quick Reference
 
 ## Performance Metrics (Weekly Value-Weighted)
-- **Total Return**: +119%
-- **Annualized Return**: +238% (extrapolated)
-- **Sharpe Ratio**: 0.45
-- **Max Drawdown**: -35%
-- **Volatility (Annualized)**: 127%
+- **Total Return**: +14.95%
+- **Annualized Return**: +32.73%
+- **Sharpe Ratio**: 1.29
+- **Max Drawdown**: -6.2%
+- **Volatility (Annualized)**: 24.1%
 
 ## Alpha Analysis (FF5 Model)
 - **Long-Short Alpha**: +35.48% (t=1.16)
@@ -604,10 +604,10 @@ Traditional strategies rely on:
 
 ## Emphasis Points
 🔴 **Must Cover:**
-- Weekly value-weighted: +119% return (Slide 4)
+- Weekly value-weighted: +14.95% return / 32.73% annualized (Slide 4)
 - +35% alpha, stable across models (Slide 6)
 - Short leg drives performance (Slide 6, 10)
-- Factor-independent (near-zero betas) (Slide 7)
+- Factor-independent (low R² 28%, negative market beta -0.82) (Slide 7)
 - Survives transaction costs: +27% net alpha (Slide 8)
 - Cross-sectional significance: t>2.8*** (Slide 9)
 

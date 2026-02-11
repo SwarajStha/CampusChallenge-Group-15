@@ -24,10 +24,13 @@ import warnings
 
 warnings.filterwarnings('ignore')
 
-# File paths
-PORTFOLIO_DIR = "../Portfolio"
-FACTOR_DIR = "./Fama_French"
-OUTPUT_DIR = "../results/Factor_Models"
+# File paths (relative to project root)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.join(script_dir, '..', '..')  # Go up to project root
+
+PORTFOLIO_DIR = os.path.join(project_root, 'Statistics', 'Portfolio Returns')
+FACTOR_DIR = os.path.join(project_root, 'data', 'Fama_French')
+OUTPUT_DIR = os.path.join(project_root, 'Statistics', 'Factor_Models Statistics')
 
 # Factor data files (downloaded from Kenneth French's data library)
 FACTOR_FILES = {

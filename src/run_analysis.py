@@ -7,13 +7,17 @@ from api_client import call_groq
 from prompt_engine import load_system_prompt, build_messages
 from sentiment_analysis import parse_llm_response
 
+# Get project root (go up one level from src/)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.join(script_dir, '..')  # Go up to project root
+
 # Configuration
-DATA_PATH = "CampusChallenge-Group-15/sample-data/API_test.csv"
-RESULTS_DIR = "CampusChallenge-Group-15/results/Decision Testing Scores"
+DATA_PATH = os.path.join(project_root, 'data', 'data (sample and setup)', 'API_test.csv')
+RESULTS_DIR = os.path.join(project_root, 'Statistics', 'Prompt Testing Phase', 'Decision Testing Scores (Prompt Testing)')
 
 # Switch between prompt versions here
-# PROMPT_PATH = "CampusChallenge-Group-15/prompts/prompt_v6.txt"  # Two-message format
-PROMPT_PATH = "CampusChallenge-Group-15/prompts/prompt_v8.txt"  # Single-message with placeholders
+# PROMPT_PATH = os.path.join(project_root, 'prompts', 'prompt_v6.txt')  # Two-message format
+PROMPT_PATH = os.path.join(project_root, 'prompts', 'prompt_v8 (FINAL).txt')  # Single-message with placeholders
 
 
 def get_next_filename(base="Decision_Testing", ext=".csv", directory=RESULTS_DIR):

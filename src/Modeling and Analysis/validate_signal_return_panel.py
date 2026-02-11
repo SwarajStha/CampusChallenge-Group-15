@@ -21,9 +21,12 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-# File paths
-PANEL_FILE = "CampusChallenge-Group-15\data\signal_return_panel_cleaned(2).csv"
-OUTPUT_DIR = "CampusChallenge-Group-15\data\Panel_Validation"
+# File paths (relative to project root)
+script_dir = os.path.dirname(os.path.abspath(__file__))
+project_root = os.path.join(script_dir, '..', '..')  # Go up to project root
+
+PANEL_FILE = os.path.join(project_root, 'data', 'signal_return_panel_cleaned(2).csv')
+OUTPUT_DIR = os.path.join(project_root, 'data', 'Panel_Validation')
 
 # Thresholds for warnings
 MIN_TICKERS_PER_DAY = 30  # Minimum tickers needed for portfolio formation
