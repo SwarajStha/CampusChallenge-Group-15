@@ -1,5 +1,5 @@
 
-running python CampusChallenge-Group-15/data/prepare_signal_return_panel.py
+running python group_{15}/data/prepare_signal_return_panel.py
 ============================================================
 SIGNAL-RETURN PANEL CREATION
 ============================================================
@@ -47,7 +47,7 @@ Median gap: 1 days
 ============================================================
 SAVING OUTPUT
 ============================================================
-Output file: CampusChallenge-Group-15\data\signal_return_panel.csv
+Output file: group_{15}\data\signal_return_panel.csv
 Records in panel: 57880
 
 Date range: 2024-07-01 00:00:00 to 2024-12-30 00:00:00
@@ -61,10 +61,10 @@ First 5 rows:
 3      A  2024-07-22         0.545  2024-07-23 -0.020762  130.64999  3.892675e+07         1
 4      A  2024-07-23         0.225  2024-07-24  0.026866  134.16000  3.811857e+07         1
 
-✅ Panel saved to CampusChallenge-Group-15\data\signal_return_panel.csv
+✅ Panel saved to group_{15}\data\signal_return_panel.csv
 
 
-running python CampusChallenge-Group-15/data/validate_signal_return_panel.py
+running python group_{15}/data/validate_signal_return_panel.py
 
 ============================================================
 SIGNAL-RETURN PANEL VALIDATION
@@ -202,7 +202,7 @@ Signal-Return correlation: 0.0230
 
 
 
-python CampusChallenge-Group-15/data/clean_signal_return_panel.py   
+python group_{15}/data/clean_signal_return_panel.py   
 
 ============================================================
 SIGNAL-RETURN PANEL CLEANING
@@ -277,7 +277,7 @@ Observations per ticker (cleaned):
 ============================================================
 SAVING CLEANED PANEL
 ============================================================
-✅ Cleaned panel saved to: CampusChallenge-Group-15\data\signal_return_panel_cleaned.csv
+✅ Cleaned panel saved to: group_{15}\data\signal_return_panel_cleaned.csv
    Records: 57,857
    Tickers: 1102
 
@@ -290,7 +290,7 @@ NEXT STEPS
 ============================================================
 
 
-python CampusChallenge-Group-15/Portfolio/portfolio_backtest.py     
+python group_{15}/Portfolio/portfolio_backtest.py     
 
 ============================================================
 PORTFOLIO BACKTEST - MULTIPLE CONFIGURATIONS
@@ -334,7 +334,7 @@ Assigning equal-weights...
 
 Computing daily portfolio returns...
   Weighted return observations: 18514
-C:\Users\swara\OneDrive - TUM\Sem 1\Campus Challenge - Investing with AI\CampusChallenge-Group-15\Portfolio\portfolio_backtest.py:255: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+C:\Users\swara\OneDrive - TUM\Sem 1\Campus Challenge - Investing with AI\group_{15}\Portfolio\portfolio_backtest.py:255: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
   daily_portfolio_returns = weighted_returns.groupby(['return_date', 'position']).apply(
   Daily return series length: 107
   Date range: 2024-07-31 00:00:00 to 2024-12-31 00:00:00
@@ -371,8 +371,8 @@ LONG_SHORT Portfolio:
 
 Average Turnover per Rebalance: 66.23%
 
-  Saved daily returns to: CampusChallenge-Group-15\Portfolio\portfolio_returns_monthly_equal.csv
-  Saved summary metrics to: CampusChallenge-Group-15\Portfolio\portfolio_summary_monthly_equal.csv
+  Saved daily returns to: group_{15}\Portfolio\portfolio_returns_monthly_equal.csv
+  Saved summary metrics to: group_{15}\Portfolio\portfolio_summary_monthly_equal.csv
 
 ============================================================
 RUNNING BACKTEST: MONTHLY / VALUE-WEIGHT
@@ -407,7 +407,7 @@ Assigning value-weights...
 
 Computing daily portfolio returns...
   Weighted return observations: 18514
-C:\Users\swara\OneDrive - TUM\Sem 1\Campus Challenge - Investing with AI\CampusChallenge-Group-15\Portfolio\portfolio_backtest.py:255: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+C:\Users\swara\OneDrive - TUM\Sem 1\Campus Challenge - Investing with AI\group_{15}\Portfolio\portfolio_backtest.py:255: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
   daily_portfolio_returns = weighted_returns.groupby(['return_date', 'position']).apply(
   Daily return series length: 107
   Date range: 2024-07-31 00:00:00 to 2024-12-31 00:00:00
@@ -444,8 +444,8 @@ LONG_SHORT Portfolio:
 
 Average Turnover per Rebalance: 69.12%
 
-  Saved daily returns to: CampusChallenge-Group-15\Portfolio\portfolio_returns_monthly_value.csv
-  Saved summary metrics to: CampusChallenge-Group-15\Portfolio\portfolio_summary_monthly_value.csv
+  Saved daily returns to: group_{15}\Portfolio\portfolio_returns_monthly_value.csv
+  Saved summary metrics to: group_{15}\Portfolio\portfolio_summary_monthly_value.csv
 
 ============================================================
 RUNNING BACKTEST: WEEKLY / EQUAL-WEIGHT
@@ -480,7 +480,7 @@ Assigning equal-weights...
 
 Computing daily portfolio returns...
   Weighted return observations: 19765
-C:\Users\swara\OneDrive - TUM\Sem 1\Campus Challenge - Investing with AI\CampusChallenge-Group-15\Portfolio\portfolio_backtest.py:255: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+C:\Users\swara\OneDrive - TUM\Sem 1\Campus Challenge - Investing with AI\group_{15}\Portfolio\portfolio_backtest.py:255: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
   daily_portfolio_returns = weighted_returns.groupby(['return_date', 'position']).apply(
   Daily return series length: 124
   Date range: 2024-07-08 00:00:00 to 2024-12-31 00:00:00
@@ -517,8 +517,8 @@ LONG_SHORT Portfolio:
 
 Average Turnover per Rebalance: 77.99%
 
-  Saved daily returns to: CampusChallenge-Group-15\Portfolio\portfolio_returns_weekly_equal.csv
-  Saved summary metrics to: CampusChallenge-Group-15\Portfolio\portfolio_summary_weekly_equal.csv
+  Saved daily returns to: group_{15}\Portfolio\portfolio_returns_weekly_equal.csv
+  Saved summary metrics to: group_{15}\Portfolio\portfolio_summary_weekly_equal.csv
 
 ============================================================
 RUNNING BACKTEST: WEEKLY / VALUE-WEIGHT
@@ -553,7 +553,7 @@ Assigning value-weights...
 
 Computing daily portfolio returns...
   Weighted return observations: 19765
-C:\Users\swara\OneDrive - TUM\Sem 1\Campus Challenge - Investing with AI\CampusChallenge-Group-15\Portfolio\portfolio_backtest.py:255: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
+C:\Users\swara\OneDrive - TUM\Sem 1\Campus Challenge - Investing with AI\group_{15}\Portfolio\portfolio_backtest.py:255: FutureWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.
   daily_portfolio_returns = weighted_returns.groupby(['return_date', 'position']).apply(
   Daily return series length: 124
   Date range: 2024-07-08 00:00:00 to 2024-12-31 00:00:00
@@ -590,8 +590,8 @@ LONG_SHORT Portfolio:
 
 Average Turnover per Rebalance: 78.98%
 
-  Saved daily returns to: CampusChallenge-Group-15\Portfolio\portfolio_returns_weekly_value.csv
-  Saved summary metrics to: CampusChallenge-Group-15\Portfolio\portfolio_summary_weekly_value.csv
+  Saved daily returns to: group_{15}\Portfolio\portfolio_returns_weekly_value.csv
+  Saved summary metrics to: group_{15}\Portfolio\portfolio_summary_weekly_value.csv
 
 ============================================================
 CROSS-CONFIGURATION COMPARISON
@@ -604,10 +604,10 @@ monthly_value   monthly     value         0.019963              0.047652       0
  weekly_equal    weekly     equal        -0.004805             -0.009741       0.048380        -0.178331        -0.041462      0.779938
  weekly_value    weekly     value         0.149494              0.327288       0.240694         1.292444        -0.061639      0.789752
 
-  Saved comparison to: CampusChallenge-Group-15\Portfolio\portfolio_comparison_all_configs.csv
+  Saved comparison to: group_{15}\Portfolio\portfolio_comparison_all_configs.csv
 
 ============================================================
 BACKTEST COMPLETE
 ============================================================
-All results saved to: CampusChallenge-Group-15\Portfolio/
+All results saved to: group_{15}\Portfolio/
 ============================================================

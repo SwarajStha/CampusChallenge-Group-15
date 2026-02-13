@@ -19,14 +19,12 @@ Just downloading this directory will not run the code as the Git upload is ignor
 - Alpha survives even at high transaction costs (50 bps → +14.94% net alpha)
 - Cross-sectional validation confirms time-series factor model results
 
-See [Executive_Summary.md](Executive_Summary.md) for comprehensive analysis and [Presentation_Slides.md](Presentation_Slides.md) for presentation deck.
-
 ---
 
-## Directory Structure
+## Directory Structure (updated version - Complete_File-Structure.md)
 
 ```
-CampusChallenge-Group-15/
+group_{15}/
 ├── .gitignore
 ├── .env                              ← API key (not tracked in git)
 ├── requirements.txt                  ← Python dependencies
@@ -48,29 +46,19 @@ CampusChallenge-Group-15/
 │       └── Summarized_Results_Table.md ← Results summary table
 │
 ├── All_RAW_Returns/                  ← Raw sentiment and return data
-│   ├── data_analysis.ipynb           ← Quality assurance and validation notebook
 │   ├── sentiments_group 15.csv       ← Raw sentiment data (gitignored, 310MB)
-│   ├── returned_data.csv             ← Raw return data (gitignored, 283MB)
-│   ├── daily_return_data_filtered.csv ← Filtered returns (gitignored, 60MB)
-│   ├── ticker_mismatches.csv         ← Ticker validation report
 │   └── Extracted Files/              ← Cleaned sentiment extractions
 │       └── Final Extracted File.csv  ← Validated, sorted sentiment data
 │
 ├── data/                             ← Cleaned and processed data
 │   ├── data.ipynb                    ← Data exploration and analysis
 │   ├── daily_return_data_cleaned.csv ← Cleaned returns sorted by ticker+date
-│   ├── daily_return_data_datefiltered.csv ← Date-filtered returns
-│   ├── signal_return_panel.csv       ← Combined signal-return panel
-│   ├── signal_return_panel_cleaned.csv ← Cleaned panel data
 │   ├── signal_return_panel_cleaned(2).csv ← Final cleaned panel
-│   ├── train_return_data_daily.csv   ← Training data (daily frequency)
 │   ├── Full Extracted File (sorted).csv ← Sorted sentiment data
-│   ├── data (sample and setup)/      ← Sample data for testing and setup files
 │   ├── Fama_French/                  ← Fama-French factor data
 │   │   ├── F-F_Research_Data_Factors_daily.csv
 │   │   ├── F-F_Research_Data_5_Factors_2x3_daily.csv
-│   │   └── ... (monthly versions)
-│   └── Panel_Validation/             ← Panel validation outputs
+│   └── └── ... (monthly versions)
 │
 ├── Prompt References/                ← Reference papers and prompting ideas
 │   ├── Prompting Idea Notes.txt      ← Prompting strategy notes
@@ -423,7 +411,7 @@ The project includes multiple prompt versions (v1-v8), each iterating on the app
 
 3. **Run Factor Model Analysis**
    ```
-   python CampusChallenge-Group-15/src/Modeling\ and\ Analysis/factor_alpha.py
+   python group_{15}/src/Modeling\ and\ Analysis/factor_alpha.py
    ```
    - **What it does**:
      - Loads 4 portfolio configurations and Fama-French factors
@@ -438,7 +426,7 @@ The project includes multiple prompt versions (v1-v8), each iterating on the app
 
 4. **Run Transaction Cost Analysis**
    ```
-   python CampusChallenge-Group-15/src/Modeling\ and\ Analysis/transaction_cost_analysis.py
+   python group_{15}/src/Modeling\ and\ Analysis/transaction_cost_analysis.py
    ```
    - **What it does**:
      - Takes gross alpha from factor models
@@ -453,7 +441,7 @@ The project includes multiple prompt versions (v1-v8), each iterating on the app
 
 5. **Run Fama-MacBeth Cross-Sectional Analysis**
    ```
-   python CampusChallenge-Group-15/src/Modeling\ and\ Analysis/fama_macbeth.py
+   python group_{15}/src/Modeling\ and\ Analysis/fama_macbeth.py
    ```
    - **What it does**:
      - Loads signal-return panel data
@@ -472,7 +460,7 @@ The project includes multiple prompt versions (v1-v8), each iterating on the app
    ```
    [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
    $env:PYTHONIOENCODING="utf-8"
-   python CampusChallenge-Group-15/src/Modeling\ and\ Analysis/create_visualizations.py
+   python group_{15}/src/Modeling\ and\ Analysis/create_visualizations.py
    ```
    - **Prerequisites**: Install visualization libraries if needed:
      ```
@@ -504,7 +492,7 @@ The project includes multiple prompt versions (v1-v8), each iterating on the app
 
 1. **Raw Sentiment Extraction**
    ```
-   python CampusChallenge-Group-15/src/Modeling\ and\ Analysis/Extract_Data.py
+   python group_{15}/src/Modeling\ and\ Analysis/Extract_Data.py
    ```
    - Input: `sentiments_group 15.csv` (raw unstructured sentiment text)
    - Process:
@@ -525,7 +513,7 @@ The project includes multiple prompt versions (v1-v8), each iterating on the app
 
 3. **Return Data Cleaning**
    ```
-   python CampusChallenge-Group-15/src/Modeling\ and\ Analysis/data_cleanup_returns.py
+   python group_{15}/src/Modeling\ and\ Analysis/data_cleanup_returns.py
    ```
    - Input: 
      - `data/daily_return_data_datefiltered.csv` (returns for all tickers)
@@ -539,7 +527,7 @@ The project includes multiple prompt versions (v1-v8), each iterating on the app
 
 4. **Panel Data Preparation** (optional, for advanced analysis)
    ```
-   python CampusChallenge-Group-15/src/Modeling\ and\ Analysis/prepare_signal_return_panel.py
+   python group_{15}/src/Modeling\ and\ Analysis/prepare_signal_return_panel.py
    ```
    - Combines sentiment signals with return data in panel format
    - Output: `data/signal_return_panel.csv`
@@ -725,16 +713,16 @@ If you want to jump directly to the statistical validation and visualization:
 
 2. **Run factor model analysis** (requires portfolio returns in `Statistics/Portfolio Returns/` and Fama-French data in `data/Fama_French/`):
    ```bash
-   python CampusChallenge-Group-15/src/Modeling\ and\ Analysis/factor_alpha.py
-   python CampusChallenge-Group-15/src/Modeling\ and\ Analysis/transaction_cost_analysis.py
-   python CampusChallenge-Group-15/src/Modeling\ and\ Analysis/fama_macbeth.py
+   python group_{15}/src/Modeling\ and\ Analysis/factor_alpha.py
+   python group_{15}/src/Modeling\ and\ Analysis/transaction_cost_analysis.py
+   python group_{15}/src/Modeling\ and\ Analysis/fama_macbeth.py
    ```
 
 3. **Generate visualizations** (Windows PowerShell):
    ```powershell
    [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
    $env:PYTHONIOENCODING="utf-8"
-   python CampusChallenge-Group-15/src/Modeling\ and\ Analysis/create_visualizations.py
+   python group_{15}/src/Modeling\ and\ Analysis/create_visualizations.py
    ```
 
 4. **Review outputs**:
